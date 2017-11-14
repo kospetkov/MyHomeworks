@@ -13,7 +13,7 @@
             sum += i;
     }
         document.getElementById('sum').innerHTML = 'sum of nambers from ' + firstNumber + ' to ' + secondNumber + ' is = ' + sum;
-}
+ }
 
  function sumOfNumbers_1() {
     var firstNumber = 0;
@@ -34,7 +34,7 @@
         }
     }
         document.getElementById('sum_1').innerHTML = 'sum of nambers from ' + firstNumber + ' to ' + secondNumber + ' is = ' + sum;
-}
+ }
 
  function treeBild() {
      for(var i = 0; i < 50; i ++) {
