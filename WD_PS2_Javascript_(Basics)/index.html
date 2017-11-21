@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en" class="translated-ltr">
 <head>
     <meta charset="utf-8">
@@ -21,7 +22,7 @@
         <p id="sum_1" class="input__style"></p>
     </div>
     <div class="div__for_numbers" id="div__tree">
-        <input type="button" value="click me" class="input__style" onclick="treeBild()" />
+        <input type="button" value="click me" class="input__style" onclick="treeBild()"/>
     </div>
     <div class="div__for_numbers">
         <input type="text" id="input__data" class="input__style" placeholder="secunds"/>
@@ -39,5 +40,28 @@
         <input type="button" class="input__style" onclick="dateDifference()" value="timeout"/>
         <p id="p__date_1" class="input__style"></p>
     </div>
+    <div id="parent_div" class="div__for_numbers">
+        <input type="text" id="date_for_zodiak" class="input__style" placeholder="enter date born"/>
+        <input type="button" class="input__style" onclick="dateForZodiak()" value="you zodiak"/>
+        <p id="p_zodiak"></p>
+        <div id="zodiak">
+        </div>
+    </div>
+    <div id="div_chess" class="div__for_numbers">
+        <input type="text" id="height_chess" class="input__style" placeholder="height board" />
+        <input type="text" id="width_chess" class="input__style" placeholder="width board" />
+        <input type="button" class="input__style" onclick="buildCheckBoard()" value="create board"/>
+        <div id="div__board">
+        </div>
+    </div>
+    <div id="div_floor" class="div__for_numbers">
+        <input type="text" id="entrances" class="input__style" placeholder="entrances"/>
+        <input type="text" id="on_the_floor" class="input__style" placeholder="apartaments on the floor"/>
+        <input type="text" id="floors_house" class="input__style" placeholder="floors in the house"/>
+        <input type="text" id="apartament" class="input__style" placeholder="number for apartament"/>
+        <input type="button" class="input__style" onclick="floorForApartament()" value="click me"/>
+        <p id="p_floor"></p>
+    </div>
 </body>
 </html>
+
