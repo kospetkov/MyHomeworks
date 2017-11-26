@@ -1,12 +1,12 @@
 function sumOfNumbers() {
     var firstNumber = Number(document.getElementById("first").value);
     var secondNumber = Number(document.getElementById("second").value);
-    if(!firstNumber || !secondNumber) {
+    if (!firstNumber || !secondNumber) {
         document.getElementById('sum').innerText = "you enter not correct data";
         return;
     }
     var sum = 0;
-    for(var i = firstNumber; i <= secondNumber; i ++) {
+    for (var i = firstNumber; i <= secondNumber; i++) {
         sum += i;
     }
     document.getElementById('sum').innerText = 'sum of nambers from ' + firstNumber + ' to ' + secondNumber + ' is = ' + sum;
@@ -15,14 +15,14 @@ function sumOfNumbers() {
 function sumOfNumbers_1() {
     var firstNumber = Number(document.getElementById("first_1").value);
     var secondNumber = Number(document.getElementById("second_1").value);
-    if(!firstNumber || !secondNumber) {
+    if (!firstNumber || !secondNumber) {
         document.getElementById('sum_1').innerText = "you enter not correct data";
         return;
     }
     var sum = 0;
-    for(var i = firstNumber; i <= secondNumber; i ++) {
+    for (var i = firstNumber; i <= secondNumber; i++) {
         var abs = Math.abs(i % 10);
-        if((abs === 2) || (abs === 3) || (abs === 7)) {
+        if ((abs === 2) || (abs === 3) || (abs === 7)) {
             sum += i;
         }
     }
@@ -30,10 +30,10 @@ function sumOfNumbers_1() {
 }
 
 function treeBild() {
-    for(var i = 0; i < 50; i ++) {
+    for (var i = 0; i < 50; i++) {
         var star = '';
         var rowTree = document.createElement('p');
-        for(var j = 0; j < i; j ++) {
+        for (var j = 0; j < i; j++) {
             star += '*';
         }
         rowTree.innerText = star;
@@ -43,34 +43,34 @@ function treeBild() {
 
 function timeOutOfSeconds() {
     var inputData = Number(document.getElementById('input__data').value);
-    if(!inputData) {
+    if (!inputData) {
         document.getElementById('p__date').innerText = "you enter not correct data";
         return;
     }
     var hour = Math.floor(inputData / 3600);
-    if(hour < 10) hour = "0" + hour;
+    if (hour < 10) hour = "0" + hour;
     var minute = Math.floor((inputData / 60) % 60);
-    if(minute < 10) minute = "0" + minute;
+    if (minute < 10) minute = "0" + minute;
     var secund = Math.floor(inputData % 60);
-    if(secund < 10) secund = "0" + secund;
+    if (secund < 10) secund = "0" + secund;
     document.getElementById('p__date').innerText = "time is  " + hour + ":" + minute + ":" + secund;
 }
 
 function ageOutput() {
     var inputData = Number(document.getElementById('age__data').value);
     var outputElement = document.getElementById('p__age');
-    if(!inputData) {
+    if (!inputData) {
         document.getElementById('p__age').innerText = "you enter not correct data";
         return;
     }
-    if((inputData >= 10) && (inputData <= 20)) {
+    if ((inputData >= 10) && (inputData <= 20)) {
         inputData = Number(inputData);
         outputElement.innerText = "Вам  " + inputData + " лет";
         return;
     }
     else {
         var year = inputData % 10;
-        switch(year) {
+        switch (year) {
             case 1:
                 outputElement.innerText = "Вам  " + inputData + " год";
                 break;
@@ -105,7 +105,7 @@ function dateDifference() {
         if (month < 0) {
             month = 12 - month;
             year--;
-            if(year < 0) {
+            if (year < 0) {
                 year = 0;
             }
         }
@@ -149,7 +149,7 @@ function dateForZodiak() {
     div.id = "zodiak";
     parent.appendChild(div);
     var myImg = document.createElement('img');
-    switch(month) {
+    switch (month) {
         case 0:
             if (day <= 20) {
                 myImg.src = "img/1.jpg";
@@ -179,19 +179,19 @@ function dateForZodiak() {
                 myImg.src = "img/3.jpg";
                 myImg.className = "img_zodiak";
                 div.appendChild(myImg);
-            }   
+            }
             else {
                 myImg.src = "img/4.jpg";
                 myImg.className = "img_zodiak";
                 div.appendChild(myImg);
-            } 
+            }
             break;
         case 3:
             if (day <= 20) {
                 myImg.src = "img/4.jpg";
                 myImg.className = "img_zodiak";
                 div.appendChild(myImg);
-            }    
+            }
             else {
                 myImg.src = "img/5.jpg";
                 myImg.className = "img_zodiak";
@@ -293,15 +293,16 @@ function dateForZodiak() {
                 myImg.className = "img_zodiak";
                 div.appendChild(myImg);
             }
-   
+
 
     }
-   
+
 }
 
 function buildCheckBoard() {
-    var inputData1 = Number(document.getElementById('height_chess').value);
-    var inputData2 = Number(document.getElementById('width_chess').value);
+    var inputData1 = +document.getElementById('height_chess').value;
+    console.log(typeof(inputData1));
+    var inputData2 = +document.getElementById('width_chess').value;
     if (!inputData1 || !inputData2) {
         document.getElementById('div__board').innerText = "you enter not correct data";
     }
@@ -312,19 +313,19 @@ function buildCheckBoard() {
     div.id = "div__board";
     div.className = "chess_style";
     div.style.height = inputData1 * 50 + "px";
-    div.style.width = inputData2 * 50 + "px";
+    div.style.width = inputData2 * 41 + "px";
     for (var i = 0; i < inputData1; i++) {
         for (var j = 0; j < inputData2; j++) {
-             var divChess = document.createElement('div');
-             if ((i + j) % 2 === 0) {
+            var divChess = document.createElement('div');
+            if ((i + j) % 2 === 0) {
                 divChess.className = "board_black";
                 div.appendChild(divChess);
-             }
-             else {
+            }
+            else {
                 divChess.className = "board_white";
                 div.appendChild(divChess);
-             }
-        } 
+            }
+        }
     }
     parent.appendChild(div);
 }
@@ -339,3 +340,53 @@ function floorForApartament() {
     console.log(entrance);
     console.log(f_floor);
 }
+
+function sumForNumber() {
+    var inputData = document.getElementById('input_number').value;
+    if (!(+inputData)) {
+        document.getElementById('p_number').innerText = "you enter not correct data";
+        return;
+    }
+    var strLength = inputData.length;
+    var sum = 0;
+    var i;
+    if (inputData.charAt(0) === '-') {
+        i = 1;
+    }
+    else {
+        i = 0;
+    }
+    for (;i < strLength; i ++) {
+        sum += +inputData.charAt(i);
+    }
+    document.getElementById('p_number').innerText = "sum digits of numbers  : " + sum;
+}
+
+function linksToList() {
+    var inputData = document.getElementById('text_area').value;
+    var links = inputData.split(',');
+    var linksLength = links.length;
+    var list = [];
+    for (var i = 0; i < linksLength; i ++) {
+        list[i] = links[i].replace(/https?:\/\//gi, '');
+    }
+    list.sort();
+
+    var listLength = list.length;
+    var parent = document.getElementById('div_for_links');
+    var ul = document.getElementById('list_for_links');
+    parent.removeChild(ul);
+    ul = document.createElement('ul');
+    ul.id = 'list_for_links';
+    for (var j = 0; j < listLength; j ++) {
+        var li = document.createElement('li');
+        li.className = "link_style";
+        li.innerHTML = '<a href="//' + list[j] + '">' + list[j] + '</a>';
+        ul.appendChild(li);
+    }
+    parent.appendChild(ul);
+}
+
+
+
+
