@@ -439,8 +439,6 @@ function linksToList() {
     var listLength = list.length;
     var parent = document.getElementById('div_for_links');
     var ul = document.getElementById('list_for_links');
-    //ul = document.createElement('ul');
-    //ul.id = 'list_for_links';
     for (var j = 0; j < listLength; j++) {
         var li = document.createElement('li');
         li.className = "link_style";
