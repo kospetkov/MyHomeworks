@@ -26,20 +26,20 @@ html, body {
 }
 
 .chess_style {
-  margin: 30px;
+  margin: 60px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .board_black {
-  width: 41px;
-  height: 50px;
+  width: 45px;
+  height: 60px;
   background: black;
 }
 
 .board_white {
-  width: 41px;
-  height: 50px;
+  width: 45px;
+  height: 60px;
   background: white;
 }
 

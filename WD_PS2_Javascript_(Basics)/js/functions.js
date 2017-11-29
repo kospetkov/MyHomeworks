@@ -5,8 +5,17 @@ function sumOfNumbers() {
         document.getElementById('sum').innerText = "you enter not correct data";
         return;
     }
+    var i, length;
+    if ((firstNumber - secondNumber) <= 0) {
+        i = firstNumber;
+        length = secondNumber;
+    }
+    else {
+        i = secondNumber;
+        length = firstNumber;
+    }
     var sum = 0;
-    for (var i = firstNumber; i <= secondNumber; i++) {
+    for (; i <= length; i++) {
         sum += i;
     }
     document.getElementById('sum').innerText = 'sum of nambers from ' + firstNumber + ' to ' + secondNumber + ' is = ' + sum;
@@ -19,8 +28,17 @@ function sumOfNumbers_1() {
         document.getElementById('sum_1').innerText = "you enter not correct data";
         return;
     }
+    var i, length;
+    if ((firstNumber - secondNumber) <= 0) {
+        i = firstNumber;
+        length = secondNumber;
+    }
+    else {
+        i = secondNumber;
+        length = firstNumber;
+    }
     var sum = 0;
-    for (var i = firstNumber; i <= secondNumber; i++) {
+    for (; i <= length; i++) {
         var abs = Math.abs(i % 10);
         if ((abs === 2) || (abs === 3) || (abs === 7)) {
             sum += i;
@@ -99,44 +117,88 @@ function dateDifference() {
         document.getElementById('p__date_1').innerText = "you enter not correct data";
         return;
     }
-    if (date1.getFullYear() > date2.getFullYear()) {
-        var year = date1.getFullYear() - date2.getFullYear();
-        var month = date1.getMonth() - date2.getMonth();
-        if (month < 0) {
-            month = 12 - month;
-            year--;
-            if (year < 0) {
-                year = 0;
-            }
-        }
-        var day = date1.getDate() - date2.getDate();
-        if (day < 0) {
-            day = 30 - day;
-            month--;
-        }
-        var hour = date1.getHours() - date2.getHours();
-        if (hour < 0) {
-            hour = 24 - hour;
-            day--;
-        }
-        var minute = date1.getMinutes() - date2.getMinutes();
-        if (minute < 0) {
-            minute = 60 - minute;
-            hour--;
-        }
-        var secund = date1.getSeconds() - date2.getSeconds();
+    var secund = 0, minute = 0, hour = 0, day = 0, month = 0, year = 0, timeInterval = {};
+    if ((date1.getFullYear() - date2.getFullYear()) >= 0) {
+        secund = date1.getSeconds() - date2.getSeconds();
         if (secund < 0) {
-            secund = 60 - secund;
-            minute--;
+            secund = 60 - Math.abs(secund);
+            minute --;
+        }
+        minute += date1.getMinutes() - date2.getMinutes();
+        if (minute < 0) {
+            minute = 60 - Math.abs(minute);
+            hour --;
+        }
+        hour += date1.getHours() - date2.getHours();
+        if (hour < 0) {
+            hour = 24 - Math.abs(hour);
+            day --;
+        }
+        day += date1.getDate() - date2.getDate();
+        if (day < 0) {
+            day = 30 - Math.abs(day);
+            month --;
+        }
+        month += date1.getMonth() - date2.getMonth();
+        if (month < 0) {
+            month = 12 - Math.abs(month);
+            year --;
+        }
+        year += date1.getFullYear() - date2.getFullYear();
+        if (year < 0) {
+            year = 0;
         }
     }
-    document.getElementById('p__date_1').innerText = "year " + year + ", month " + month + ", day " + day + ", hour " + hour + ", minute" + minute + ", secunds " + secund;
+    else {
+        secund = date2.getSeconds() - date1.getSeconds();
+        if (secund < 0) {
+            secund = 60 - Math.abs(secund);
+            minute --;
+        }
+        minute += date2.getMinutes() - date1.getMinutes();
+        if (minute < 0) {
+            minute = 60 - Math.abs(minute);
+            hour --;
+        }
+        hour += date2.getHours() - date1.getHours();
+        if (hour < 0) {
+            hour = 24 - Math.abs(hour);
+            day --;
+        }
+        day += date2.getDate() - date1.getDate();
+        if (day < 0) {
+            day = 30 - Math.abs(day);
+            month --;
+        }
+        month += date2.getMonth() - date1.getMonth();
+        if (month < 0) {
+            month = 12 - Math.abs(month);
+            year --;
+        }
+        year += date2.getFullYear() - date1.getFullYear();
+        if (year < 0) {
+            year = 0;
+        }
+    }
+    timeInterval = {
+        "год" : year,
+        "месяц" : month,
+        "день" : day,
+        "час" : hour,
+        "минута" : minute,
+        "секунда" : secund
+    }
+    var stringResult = '';
+    for (var i in timeInterval) {
+        stringResult += ' || ' + i + ' : ' + timeInterval[i];
+    }
+    document.getElementById('p__date_1').innerText = stringResult;
 }
 
 function dateForZodiak() {
     var inputData = document.getElementById('date_for_zodiak').value;
     var date = new Date(inputData);
-    if (date == 'Invalid Date') {
+    if (date === 'Invalid Date') {
         document.getElementById('p_zodiak').innerText = "you enter not correct data";
         return;
     }
@@ -312,8 +374,8 @@ function buildCheckBoard() {
     div = document.createElement('div');
     div.id = "div__board";
     div.className = "chess_style";
-    div.style.height = inputData1 * 50 + "px";
-    div.style.width = inputData2 * 41 + "px";
+    div.style.height = inputData1 * 60 + 'px';
+    div.style.width = inputData2 * 45 + 'px';
     for (var i = 0; i < inputData1; i++) {
         for (var j = 0; j < inputData2; j++) {
             var divChess = document.createElement('div');
@@ -335,10 +397,13 @@ function floorForApartament() {
     var onTheFloor = Number(document.getElementById('on_the_floor').value);
     var floorsHouse = Number(document.getElementById('floors_house').value);
     var apartament = Number(document.getElementById('apartament').value);
+    if ((entrances * onTheFloor * floorsHouse) < apartament) {
+        document.getElementById('p_floor').innerText = "you enter not correct data";
+        return;
+    }
     var entrance = Math.floor(((apartament - 1) / (floorsHouse * onTheFloor))) + 1;
     var f_floor = Math.floor(((apartament - 1) % (floorsHouse * onTheFloor)) / onTheFloor) + 1;
-    console.log(entrance);
-    console.log(f_floor);
+    document.getElementById('p_floor').innerText = 'подъезд № ' + entrance + ';  этаж № ' + f_floor;
 }
 
 function sumForNumber() {
@@ -356,7 +421,7 @@ function sumForNumber() {
     else {
         i = 0;
     }
-    for (;i < strLength; i ++) {
+    for (; i < strLength; i++) {
         sum += +inputData.charAt(i);
     }
     document.getElementById('p_number').innerText = "sum digits of numbers  : " + sum;
@@ -367,18 +432,16 @@ function linksToList() {
     var links = inputData.split(',');
     var linksLength = links.length;
     var list = [];
-    for (var i = 0; i < linksLength; i ++) {
-        list[i] = links[i].replace(/https?:\/\//gi, '');
+    for (var i = 0; i < linksLength; i++) {
+        list[i] = links[i].replace(/https?:\/\//gi, '').trim();
     }
     list.sort();
-
     var listLength = list.length;
     var parent = document.getElementById('div_for_links');
     var ul = document.getElementById('list_for_links');
-    parent.removeChild(ul);
-    ul = document.createElement('ul');
-    ul.id = 'list_for_links';
-    for (var j = 0; j < listLength; j ++) {
+    //ul = document.createElement('ul');
+    //ul.id = 'list_for_links';
+    for (var j = 0; j < listLength; j++) {
         var li = document.createElement('li');
         li.className = "link_style";
         li.innerHTML = '<a href="//' + list[j] + '">' + list[j] + '</a>';
@@ -386,7 +449,6 @@ function linksToList() {
     }
     parent.appendChild(ul);
 }
-
 
 
 
