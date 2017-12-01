@@ -1,10 +1,11 @@
+// noinspection JSAnnotator
 var ATM = {
     is_auth: false,
     current_user:false,
     current_type:false,
-
     // all cash of ATM
     cash: 2000,
+    userActions[],
     // all available users
     users: [
         {number: "0000", pin: "000", debet: 0, type: "admin"}, // EXTENDED
@@ -14,54 +15,65 @@ var ATM = {
     auth: function(number, pin) {
         var userslenght = this.users.length;
         for (var i = 0; i < userslenght; i ++) {
-            var curUser = this.users[i];
-            if ((curUser.number === number) && (curUser.pin === pin)) {
+            this.current_user = this.users[i];
+            if ((this.current_user.number === number) && (this.current_user.pin === pin)) {
                 this.is_auth = true;
+                this.current_type = this.current_user.type;
+                console.log('autorized');
+                return;
+            }
         }
-        if (this.is_auth) {
-            this.current_user = curUser;
-            this.current_type = curUser.type;
-        }
-        if (this.is_auth) {
-            console.log('autorized');
-        } else {
-            console.log('not autorized');
-        }
+        console.log('not autorized');
     },
     // check current debet
     check: function() {
-        if (this.is_auth) {
-
+        if (!this.is_auth || this.current_type === 'admin') {
+            console.log('you entered incorrect information');
+            return;
         }
-    }
+        return this.current_user.debet;
     },
     // get cash - available for user only
     getCash: function(amount) {
-        if (this.users.type === 'user') {
-            this.current_type = true;
+        if (!this.is_auth || this.current_type === 'admin') {
+            console.log('you entered incorrect information');
+            return;
         }
-        if (this.current_type && amount > this.users.debet) {
-            return true;
+        if ((amount > this.current_user.debet) && (amount <= this.cash)) {
+            console.log('there are not enough funds on the account');
+            return;
         }
-        else {
-            return false;
-        }
-
+        this.cash -= amount;
+        this.getReport(this.current_type, this.current_user.number, amount, this.current_user.debet -= amount);
+        return this.current_user.debet -= amount;
     },
     // load cash - available for user only
     loadCash: function(amount){
-
+        if (!this.is_auth || this.current_type === 'admin') {
+            console.log('you entered incorrect information');
+            return;
+        }
+        this.cash += amount;
+        this.getReport(this.current_type, this.current_user.number, amount, this.current_user.debet += amount);
+        return this.current_user.debet += amount;
     },
     // load cash to ATM - available for admin only - EXTENDED
     load_cash: function(addition) {
-
+        if (!(this.current_type === 'admin')) {
+            console.log('you entered incorrect information')
+            return;
+        }
+        this.getReport(this.current_type, this.current_user.number, addition, this.cash += addition);
+        return this.cash += addition;
     },
     // get report about cash actions - available for admin only - EXTENDED
-    getReport: function() {
-
-    },
+    getReport: function(userType, number, amount, debet) {
+            this.userActions.push({usType : userType, usNumber : number, usAmount : amount, usDebet : debet});
+        },
     // log out
     logout: function() {
-
+        this.is_auth = false;
+        this.current_user = false;
+        this.current_type = false;
     }
 };
