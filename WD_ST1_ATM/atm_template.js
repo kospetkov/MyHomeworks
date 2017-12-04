@@ -5,7 +5,7 @@ var ATM = {
     current_type:false,
     // all cash of ATM
     cash: 2000,
-    userActions[],
+    userActions: [],
     // all available users
     users: [
         {number: "0000", pin: "000", debet: 0, type: "admin"}, // EXTENDED
