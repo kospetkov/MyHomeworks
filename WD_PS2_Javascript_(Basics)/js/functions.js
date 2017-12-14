@@ -5,6 +5,10 @@ function sumOfNumbers() {
         document.getElementById('sum').innerText = "you enter not correct data";
         return;
     }
+    if (firstNumber === secondNumber) {
+        document.getElementById('sum').innerText = 'sum of nambers from ' + firstNumber + ' to ' + secondNumber + ' is = 0';
+        return;
+    }
     var i, length;
     if ((firstNumber - secondNumber) <= 0) {
         i = firstNumber;
@@ -26,6 +30,10 @@ function sumOfNumbers_1() {
     var secondNumber = Number(document.getElementById("second_1").value);
     if (!firstNumber || !secondNumber) {
         document.getElementById('sum_1').innerText = "you enter not correct data";
+        return;
+    }
+    if (firstNumber === secondNumber) {
+        document.getElementById('sum_1').innerText = 'sum of nambers from ' + firstNumber + ' to ' + secondNumber + ' is = 0';
         return;
     }
     var i, length;
@@ -118,7 +126,7 @@ function dateDifference() {
         return;
     }
     var secund = 0, minute = 0, hour = 0, day = 0, month = 0, year = 0, timeInterval = {};
-    if ((date1.getFullYear() - date2.getFullYear()) >= 0) {
+    if ((date1.getFullYear() - date2.getFullYear()) > 0) {
         secund = date1.getSeconds() - date2.getSeconds();
         if (secund < 0) {
             secund = 60 - Math.abs(secund);
@@ -149,37 +157,73 @@ function dateDifference() {
             year = 0;
         }
     }
-    else {
+    else  if ((date1.getFullYear() - date2.getFullYear()) < 0) {
         secund = date2.getSeconds() - date1.getSeconds();
         if (secund < 0) {
             secund = 60 - Math.abs(secund);
-            minute --;
+            minute--;
         }
         minute += date2.getMinutes() - date1.getMinutes();
         if (minute < 0) {
             minute = 60 - Math.abs(minute);
-            hour --;
+            hour--;
         }
         hour += date2.getHours() - date1.getHours();
         if (hour < 0) {
             hour = 24 - Math.abs(hour);
-            day --;
+            day--;
         }
         day += date2.getDate() - date1.getDate();
         if (day < 0) {
             day = 30 - Math.abs(day);
-            month --;
+            month--;
         }
         month += date2.getMonth() - date1.getMonth();
         if (month < 0) {
             month = 12 - Math.abs(month);
-            year --;
+            year--;
         }
         year += date2.getFullYear() - date1.getFullYear();
         if (year < 0) {
             year = 0;
         }
+    }  else {
+        secund = date1.getSeconds() - date2.getSeconds();
+        if (secund < 0) {
+            //secund = 60 - Math.abs(secund);
+            secund = Math.abs(secund);
+            //minute --;
+        }
+        minute += date1.getMinutes() - date2.getMinutes();
+        if (minute < 0) {
+            minute = Math.abs(minute);
+           // minute = 60 - Math.abs(minute);
+            //hour --;
+        }
+        hour += date1.getHours() - date2.getHours();
+        if (hour < 0) {
+            hour = Math.abs(hour);
+            //hour = 24 - Math.abs(hour);
+            //day --;
+        }
+        day += date1.getDate() - date2.getDate();
+        if (day < 0) {
+            day = Math.abs(day);
+            //day = 30 - Math.abs(day);
+            //month --;
+        }
+        month += date1.getMonth() - date2.getMonth();
+        if (month < 0) {
+            month = Math.abs(month);
+            //month = 12 - Math.abs(month);
+            //year --;
+        }
+        year += date1.getFullYear() - date2.getFullYear();
+        if (year < 0) {
+            year = 0;
+        }
     }
+
     timeInterval = {
         "год" : year,
         "месяц" : month,

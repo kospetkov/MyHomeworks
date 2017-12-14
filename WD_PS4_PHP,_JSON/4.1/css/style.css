@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.div_for_forms {
+  width: 100%;
+  min-height: 70px;
+  background: aqua;
+}
+
+.p_for_forms {
+  padding: 20px;
+}
+
+.chess_style {
+  margin: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.board_black {
+  width: 45px;
+  height: 60px;
+  background: black;
+}
+
+.board_white {
+  width: 45px;
+  height: 60px;
+  background: white;
+}
