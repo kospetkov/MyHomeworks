@@ -38,7 +38,7 @@ function chessBoardBuild() {
 		$width = $_POST['width'];
 		$height = $_POST['height'];
 		$chess_board = '<div class="chess_style" style="height: ' . ($height * 60) .
-			'px; width: ' . ($width * 45) . 'px;">';
+			'px; width: ' . ($width * 60) . 'px;">';
 		for ($i = 0; $i < $height; $i ++) {
 			for($j = 0; $j < $width; $j ++) {
 				if (($i + $j) % 2 === 0) {

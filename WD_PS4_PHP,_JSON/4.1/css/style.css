@@ -25,13 +25,13 @@ html, body {
 }
 
 .board_black {
-  width: 45px;
+  width: 60px;
   height: 60px;
   background: black;
 }
 
 .board_white {
-  width: 45px;
+  width: 60px;
   height: 60px;
   background: white;
 }

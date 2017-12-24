@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    background-color: lightgrey;
+}
+
+.style_div {
+    width: 771px;
+    height: 514px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 290px;
+    margin-top: 50px;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: cornflowerblue;
+}
+
+.style_for_bmw {
+    height: 257px;
+    width: 257px;
+    background-image: url("../img/2.png");
+}
+
+.style_for_audi {
+	height: 257px;
+	width: 257px;
+    background-image: url("../img/1.png");
+}
+
+.style_for_vw {
+    height: 257px;
+    width: 257px;
+    background-image: url("../img/6.png");
+}
+
+.style_for_hummer {
+    height: 257px;
+    width: 257px;
+    background-image: url("../img/3.png");
+}
+
+.style_for_mini {
+    height: 257px;
+    width: 257px;
+    background-image: url("../img/5.png");
+}
+
+.style_for_mc {
+    height: 257px;
+    width: 257px;
+    background-image: url("../img/4.png");
+}

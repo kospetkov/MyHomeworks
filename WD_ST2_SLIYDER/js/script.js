@@ -14,15 +14,16 @@ const IMAGES = [
 $(document).ready(function () {
     var items = '';
     for (var i = 0, size = IMAGES.length; i < size; i++) {
-    	items += '<li><img id="li_' + (i + 1) + '" src="' + API_URL +
+        items += '<li><img id="li_' + (i + 1) + '" src="' + API_URL +
             SMALL_SIZE + IMAGES[i] + '" alt=""/></li>';
         if (i === 0) {
-        	$('li').addClass('current');
+            $('li').addClass('current');
         }
     }
     $('ul').append(items);
+    $('#li_1').parent().addClass('current');
     $('.slider-previews img').click(function () {
-    	let current = $(this);
+        let current = $(this);
         $('li').removeClass('current');
         current.parent().addClass('current');
         let imgSrc = current.attr('src').replace(SMALL_SIZE, BIG_SIZE);
@@ -30,10 +31,10 @@ $(document).ready(function () {
     });
 
     $('body').on("keydown", function (e) {
-    	if (e.keyCode !== 37 && e.keyCode !== 39) {
-    		return;
-    	}
-    	var index = +$('.current img').attr('id').replace('li_', '');
+        if (e.keyCode !== 37 && e.keyCode !== 39) {
+            return;
+        }
+        var index = +$('.current img').attr('id').replace('li_', '');
         $('li').removeClass('current');
         if (e.keyCode === 37) {
             if (index <= 1) {
@@ -41,20 +42,19 @@ $(document).ready(function () {
             } else {
                 index--;
             }
-            let newSrc = $('#li_' + index + '').attr('src').replace(SMALL_SIZE, BIG_SIZE);
-            $('#li_' + index + '').parent().addClass('current');
-            $('.slider-current img').attr('src', newSrc);
-
+            imagesChange(index);
         } else if (e.keyCode === 39) {
-        	if (index >= IMAGES.length) {
-        		index = 1;
-        	} else {
-        		index ++;
-        	}
-        	let newSrc = $('#li_' + index + '').attr('src').replace(SMALL_SIZE, BIG_SIZE);
-            $('#li_' + index + '').parent().addClass('current');
-            $('.slider-current img').attr('src', newSrc);
+            if (index >= IMAGES.length) {
+                index = 1;
+            } else {
+                index ++;
+            }
+            imagesChange(index);
         }
     });
+    function imagesChange(index) {
+        let newSrc = $('#li_' + index + '').attr('src').replace(SMALL_SIZE, BIG_SIZE);
+        $('#li_' + index + '').parent().addClass('current');
+        $('.slider-current img').attr('src', newSrc);
+    }
 });
-
