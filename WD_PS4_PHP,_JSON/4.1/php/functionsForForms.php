@@ -1,16 +1,16 @@
 <?php
-function sum_for_numbers_1() {
-	if (isset($_POST['submit_1'])) {
+function sumForNumbersOne() {
+	if (isset($_POST['submitOne'])) {
 		$sum = 0;
 		for ($i = -1000; $i <= 1000; $i++) {
 			$sum += $i;
 		}
-		return $sum;
+		echo $sum;
 	}
 }
 
-function sum_for_numbers_2() {
-	if (isset($_POST['submit_2'])) {
+function sumForNumbersTwo() {
+	if (isset($_POST['submitTwo'])) {
 		$sum = 0;
 		for ($i = -1000; $i <= 1000; $i ++) {
 			$mod = abs($i) % 10;
@@ -18,12 +18,12 @@ function sum_for_numbers_2() {
 				$sum += $i;
 			}
 		}
-		return $sum;
+		echo $sum;
 	}
 }
 
 function christmasTreeBuild() {
-	if (isset($_POST['Christmas_tree'])) {
+	if (isset($_POST['ChristmasTree'])) {
 		$size = 50;
 		$star = '*';
 		for ($i = 0; $i < $size; $i ++) {
@@ -34,10 +34,10 @@ function christmasTreeBuild() {
 }
 
 function chessBoardBuild() {
-	if (isset($_POST['chess_board'])) {
+	if (isset($_POST['chessBoard'])) {
 		$width = $_POST['width'];
 		$height = $_POST['height'];
-		$chess_board = '<div class="chess_style" style="height: ' . ($height * 60) .
+		$chess_board = '<div class="board_for_chess" style="height: ' . ($height * 60) .
 			'px; width: ' . ($width * 60) . 'px;">';
 		for ($i = 0; $i < $height; $i ++) {
 			for($j = 0; $j < $width; $j ++) {
@@ -49,22 +49,22 @@ function chessBoardBuild() {
 			}
 		}
 		$chess_board .= '</div>';
-		return $chess_board;
+		echo $chess_board;
 	}
 }
 
 function sumForNumber() {
-	if (isset($_POST['sum_of_number'])) {
+	if (isset($_POST['sumOfNumber'])) {
 		$str_number = (string)abs($_POST['number']);
-		return array_sum(str_split($str_number));
+		echo array_sum(str_split($str_number));
 	}
 }
 
 function manipulatingTheArray() {
-	if (isset($_POST['manipulating_aray'])) {
+	if (isset($_POST['manipulatingArray'])) {
 		$arr = array();
 		for ($i = 0; $i < 100; $i++) {
-			$arr[$i] = rand(1, 10);
+			$arr[$i] = mt_rand(1, 10);
 		}
 		$newArr = array_unique($arr);
 		sort($newArr);

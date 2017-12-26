@@ -18,7 +18,7 @@ html, body {
   padding: 20px;
 }
 
-.chess_style {
+.board_for_chess {
   margin: 60px;
   display: flex;
   flex-wrap: wrap;

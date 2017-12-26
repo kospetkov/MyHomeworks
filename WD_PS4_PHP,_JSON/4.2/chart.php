@@ -3,7 +3,7 @@
  * @return bool|string
  */
 function chartVisual() {
-  $fileName = 'json/object.json';
+  $fileName = 'json/data.json';
   $objJson = file_get_contents($fileName);
   $dataArray = json_decode($objJson, true);
   if (isset($_POST['bmw'])) {
@@ -21,10 +21,9 @@ function chartVisual() {
   }
   file_put_contents($fileName, json_encode($dataArray));
   $stringJson = file_get_contents($fileName, true);
-  return $stringJson;
-};
+  echo $stringJson;
+}
 
-$data = chartVisual();
 ?>
 
 <html>
@@ -33,18 +32,16 @@ $data = chartVisual();
     <script type="text/javascript">
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
-
         function drawChart() {
-            var result = '<?php echo $data; ?>';
-            var resul = result.replace(/[{}]/g, '').split(',');
-            for (var i = 0; i < resul.length; i ++) {
-                resul[i] = resul[i].split(':');
-                resul[i][1] = +resul[i][1];
+            var result = '<?= chartVisual() ?>'.replace(/[{}]/g, '').split(',');
+            for (var i = 0, size = result.length; i < size; i ++) {
+                result[i] = result[i].split(':');
+                result[i][1] = +result[i][1];
             }
-            resul.unshift(['Task', 'AUTO']);
-            var data = google.visualization.arrayToDataTable(resul);
+            result.unshift(['Task', 'AUTO']);
+            var data = google.visualization.arrayToDataTable(result);
             var options = {
-                title: 'My Daily Activities'
+                title: 'your favorite car'
             };
             var chart = new google.visualization.PieChart(document.getElementById('piechart'));
             chart.draw(data, options);

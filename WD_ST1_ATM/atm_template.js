@@ -5,7 +5,7 @@ var ATM = {
     current_type:false,
     // all cash of ATM
     cash: 2000,
-    userActions: [],
+    userActions: {},
     // all available users
     users: [
         {number: "0000", pin: "000", debet: 0, type: "admin"}, // EXTENDED
@@ -19,6 +19,7 @@ var ATM = {
             if ((this.current_user.number === number) && (this.current_user.pin === pin)) {
                 this.is_auth = true;
                 this.current_type = this.current_user.type;
+                this.userActions.usType = this.current_type;
                 console.log('autorized');
                 return;
             }
@@ -31,6 +32,7 @@ var ATM = {
             console.log('you entered incorrect information');
             return;
         }
+        this.userActions.check = 'account verification';
         return this.current_user.debet;
     },
     // get cash - available for user only
@@ -43,8 +45,11 @@ var ATM = {
             console.log('there are not enough funds on the account');
             return;
         }
+        if (amount === undefined) {
+            amount = 0;
+        }
         this.cash -= amount;
-        this.getReport(this.current_type, this.current_user.number, amount, this.current_user.debet -= amount);
+        this.userActions.getCash = amount;
         return this.current_user.debet -= amount;
     },
     // load cash - available for user only
@@ -53,8 +58,11 @@ var ATM = {
             console.log('you entered incorrect information');
             return;
         }
+        if (amount === undefined) {
+            amount = 0;
+        }
         this.cash += amount;
-        this.getReport(this.current_type, this.current_user.number, amount, this.current_user.debet += amount);
+        this.userActions.loadCash = amount;
         return this.current_user.debet += amount;
     },
     // load cash to ATM - available for admin only - EXTENDED
@@ -63,12 +71,18 @@ var ATM = {
             console.log('you entered incorrect information')
             return;
         }
-        this.getReport(this.current_type, this.current_user.number, addition, this.cash += addition);
+        if (addition === undefined) {
+            addition = 0;
+        }
+        this.userActions.load_cash = addition;
         return this.cash += addition;
     },
     // get report about cash actions - available for admin only - EXTENDED
-    getReport: function(userType, number, amount, debet) {
-            this.userActions.push({usType : userType, usNumber : number, usAmount : amount, usDebet : debet});
+    getReport: function() {
+        for (var key in this.userActions) {
+            console.log(key + ' => ' + this.userActions[key]);
+            delete this.userActions[key];
+        }
         },
     // log out
     logout: function() {
