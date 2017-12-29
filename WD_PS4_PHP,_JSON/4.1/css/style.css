@@ -19,7 +19,7 @@ html, body {
 }
 
 .board_for_chess {
-  margin: 60px;
+  margin: 60px 0 0 50px;
   display: flex;
   flex-wrap: wrap;
 }

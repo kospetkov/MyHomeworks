@@ -4,42 +4,31 @@
  */
 function chartVisual() {
   $fileName = 'json/data.json';
-  $objJson = file_get_contents($fileName);
-  $dataArray = json_decode($objJson, true);
-  if (isset($_POST['bmw'])) {
-      $dataArray['BMW'] ++;
-  } else if (isset($_POST['audi'])) {
-      $dataArray['AUDI'] ++;
-  } else if (isset($_POST['vw'])) {
-      $dataArray['VW'] ++;
-  } else if (isset($_POST['hummer'])) {
-      $dataArray['HUMMER'] ++;
-  } else if (isset($_POST['mini'])) {
-      $dataArray['MINI'] ++;
-  } else if (isset($_POST['mc'])) {
-      $dataArray['MC'] ++;
-  }
+  $dataArray = json_decode(file_get_contents($fileName), true);
+  $car = $_POST['cars'];
+  $dataArray[$car] ++;
   file_put_contents($fileName, json_encode($dataArray));
-  $stringJson = file_get_contents($fileName, true);
-  echo $stringJson;
+  echo file_get_contents($fileName, true);
 }
 
 ?>
 
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
-            var result = '<?= chartVisual() ?>'.replace(/[{}]/g, '').split(',');
-            for (var i = 0, size = result.length; i < size; i ++) {
-                result[i] = result[i].split(':');
-                result[i][1] = +result[i][1];
+            var result = JSON.parse('<?= chartVisual() ?>');
+            var arr = [];
+            for (var prop in result) {
+                arr.push([prop, result[prop]]);
             }
-            result.unshift(['Task', 'AUTO']);
-            var data = google.visualization.arrayToDataTable(result);
+            console.log(arr);
+            arr.unshift(['Task', 'AUTO']);
+            var data = google.visualization.arrayToDataTable(arr);
             var options = {
                 title: 'your favorite car'
             };
@@ -49,6 +38,6 @@ function chartVisual() {
     </script>
 </head>
 <body>
-<div id="piechart" style="width: 900px; height: 500px;"></div>
+<div id="piechart" class="piechart"></div>
 </body>
 </html>

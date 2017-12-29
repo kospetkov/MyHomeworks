@@ -9,17 +9,17 @@ html, body {
     background-color: lightgrey;
 }
 
-.style_div {
-    width: 771px;
-    height: 514px;
+.container {
+    width: 900px;
+    height: 600px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 290px;
+    margin-left: 250px;
     margin-top: 50px;
 }
 
-h1 {
+.caption_for_vote {
     margin-top: 20px;
     margin-left: 10px;
     display: flex;
@@ -28,38 +28,22 @@ h1 {
     color: cornflowerblue;
 }
 
-.style_for_bmw {
-    height: 257px;
-    width: 257px;
-    background-image: url("../img/2.png");
+.image_for_form {
+    margin: 10px;
 }
 
-.style_for_audi {
-	height: 257px;
-	width: 257px;
-    background-image: url("../img/1.png");
+.caption_for_vote {
+    font-size: 50px;
 }
 
-.style_for_vw {
-    height: 257px;
-    width: 257px;
-    background-image: url("../img/6.png");
+.button_for_form {
+    width: 100px;
+    height: 40px;
+    font-size: 30px;
+    background-color: chocolate;
 }
 
-.style_for_hummer {
-    height: 257px;
-    width: 257px;
-    background-image: url("../img/3.png");
-}
-
-.style_for_mini {
-    height: 257px;
-    width: 257px;
-    background-image: url("../img/5.png");
-}
-
-.style_for_mc {
-    height: 257px;
-    width: 257px;
-    background-image: url("../img/4.png");
+.piechart {
+    width: 900px;
+    height: 500px;
 }
