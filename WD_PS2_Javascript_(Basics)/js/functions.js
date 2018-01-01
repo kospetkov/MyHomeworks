@@ -118,112 +118,30 @@ function ageOutput() {
 
 function dateDifference() {
     var inputData1 = String(document.getElementById('first_date').value);
-    var date1 = new Date(inputData1);
     var inputData2 = String(document.getElementById('second_date').value);
-    var date2 = new Date(inputData2);
-    if ((date1 == 'Invalid Date') || (date2 == 'Invalid Date')) {
+    var dat1 = inputData1.split(',');
+    var date1 = new Date(dat1[0], dat1[1], dat1[2], dat1[3], dat1[4], dat1[5], 0);
+    var dat2 = inputData2.split(',');
+    var date2 = new Date(dat2[0], dat2[1], dat2[2], dat2[3], dat2[4], dat2[5], 0);
+    if ((date1 == 'Invalid Date') || (date2 == 'Invalid Date') || (dat1.length != 6) || (dat2.length != 6))  {
         document.getElementById('p__date_1').innerText = "you enter not correct data";
         return;
     }
     var secund = 0, minute = 0, hour = 0, day = 0, month = 0, year = 0, timeInterval = {};
-    if ((date1.getFullYear() - date2.getFullYear()) > 0) {
-        secund = date1.getSeconds() - date2.getSeconds();
-        if (secund < 0) {
-            secund = 60 - Math.abs(secund);
-            minute --;
-        }
-        minute += date1.getMinutes() - date2.getMinutes();
-        if (minute < 0) {
-            minute = 60 - Math.abs(minute);
-            hour --;
-        }
-        hour += date1.getHours() - date2.getHours();
-        if (hour < 0) {
-            hour = 24 - Math.abs(hour);
-            day --;
-        }
-        day += date1.getDate() - date2.getDate();
-        if (day < 0) {
-            day = 30 - Math.abs(day);
-            month --;
-        }
-        month += date1.getMonth() - date2.getMonth();
-        if (month < 0) {
-            month = 12 - Math.abs(month);
-            year --;
-        }
-        year += date1.getFullYear() - date2.getFullYear();
-        if (year < 0) {
-            year = 0;
-        }
-    }
-    else  if ((date1.getFullYear() - date2.getFullYear()) < 0) {
-        secund = date2.getSeconds() - date1.getSeconds();
-        if (secund < 0) {
-            secund = 60 - Math.abs(secund);
-            minute--;
-        }
-        minute += date2.getMinutes() - date1.getMinutes();
-        if (minute < 0) {
-            minute = 60 - Math.abs(minute);
-            hour--;
-        }
-        hour += date2.getHours() - date1.getHours();
-        if (hour < 0) {
-            hour = 24 - Math.abs(hour);
-            day--;
-        }
-        day += date2.getDate() - date1.getDate();
-        if (day < 0) {
-            day = 30 - Math.abs(day);
-            month--;
-        }
-        month += date2.getMonth() - date1.getMonth();
-        if (month < 0) {
-            month = 12 - Math.abs(month);
-            year--;
-        }
-        year += date2.getFullYear() - date1.getFullYear();
-        if (year < 0) {
-            year = 0;
-        }
-    }  else {
-        secund = date1.getSeconds() - date2.getSeconds();
-        if (secund < 0) {
-            //secund = 60 - Math.abs(secund);
-            secund = Math.abs(secund);
-            //minute --;
-        }
-        minute += date1.getMinutes() - date2.getMinutes();
-        if (minute < 0) {
-            minute = Math.abs(minute);
-           // minute = 60 - Math.abs(minute);
-            //hour --;
-        }
-        hour += date1.getHours() - date2.getHours();
-        if (hour < 0) {
-            hour = Math.abs(hour);
-            //hour = 24 - Math.abs(hour);
-            //day --;
-        }
-        day += date1.getDate() - date2.getDate();
-        if (day < 0) {
-            day = Math.abs(day);
-            //day = 30 - Math.abs(day);
-            //month --;
-        }
-        month += date1.getMonth() - date2.getMonth();
-        if (month < 0) {
-            month = Math.abs(month);
-            //month = 12 - Math.abs(month);
-            //year --;
-        }
-        year += date1.getFullYear() - date2.getFullYear();
-        if (year < 0) {
-            year = 0;
-        }
-    }
-
+    const SECUND_IN_MINUTE = 60;
+    const SECUND_IN_HOUR = 3600;
+    const SECUND_IN_DAY = 86400;
+    const SECUND_IN_MONTH = 2592000;
+    const SECUND_IN_YEAR = 31536000;
+    var dateInSecund1 = ((+dat1[0] * SECUND_IN_YEAR) + (+dat1[1] * SECUND_IN_MONTH) + (+dat1[2] * SECUND_IN_DAY) + (+dat1[3] * SECUND_IN_HOUR) + (+dat1[4] * SECUND_IN_MINUTE) + (+dat1[5]));
+    var dateInSecund2 = ((+dat2[0] * SECUND_IN_YEAR) + (+dat2[1] * SECUND_IN_MONTH) + (+dat2[2] * SECUND_IN_DAY) + (+dat2[3] * SECUND_IN_HOUR) + (+dat2[4] * SECUND_IN_MINUTE) + (+dat2[5]));
+    var resultInSecund = Math.abs(dateInSecund1 - dateInSecund2);
+    year = Math.floor(resultInSecund / SECUND_IN_YEAR);
+    month = Math.floor((resultInSecund - (year * SECUND_IN_YEAR)) / SECUND_IN_MONTH);
+    day = Math.floor((resultInSecund - ((year * SECUND_IN_YEAR) + (month * SECUND_IN_MONTH))) / SECUND_IN_DAY);
+    hour = Math.floor((resultInSecund - ((year * SECUND_IN_YEAR) + (month * SECUND_IN_MONTH) + (day * SECUND_IN_DAY))) / SECUND_IN_HOUR);
+    minute = Math.floor((resultInSecund - ((year * SECUND_IN_YEAR) + (month * SECUND_IN_MONTH) + (day * SECUND_IN_DAY) + (hour * SECUND_IN_HOUR))) / SECUND_IN_MINUTE);
+    secund = Math.floor(resultInSecund - ((year * SECUND_IN_YEAR) + (month * SECUND_IN_MONTH) + (day * SECUND_IN_DAY) + (hour * SECUND_IN_HOUR) + (minute * SECUND_IN_MINUTE)));
     timeInterval = {
         "год" : year,
         "месяц" : month,
@@ -241,8 +159,9 @@ function dateDifference() {
 
 function dateForZodiak() {
     var inputData = document.getElementById('date_for_zodiak').value;
-    var date = new Date(inputData);
-    if (date === 'Invalid Date') {
+    var dateArray = inputData.split('/');
+    var date = new Date(dateArray[0], (dateArray[1] - 1), dateArray[2]);
+    if ((date === 'Invalid Date') || !(dateArray[1] == (date.getMonth()) + 1)) {
         document.getElementById('p_zodiak').innerText = "you enter not correct data";
         return;
     }

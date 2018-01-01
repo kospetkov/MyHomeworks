@@ -10,115 +10,119 @@
 <div class="div__for_numbers">
     <label>first numbers
         <input
-                type="text"
-                id="first"
-                class="input__style"
-                placeholder="first number"/>
+            type="text"
+            id="first"
+            class="input__style"
+            placeholder="first number"/>
     </label>
     <label for="second">second numbers</label>
     <input
-            type="text"
-            id="second"
-            class="input__style"
-            placeholder="second number"/>
+        type="text"
+        id="second"
+        class="input__style"
+        placeholder="second number"/>
     <input
-            type="button"
-            value="to count"
-            class="input__style"
-            onclick="sumOfNumbers()"/>
+        type="button"
+        value="to count"
+        class="input__style"
+        onclick="sumOfNumbers()"/>
     <p id="sum" class="input__style"></p>
 </div>
 <div class="div__for_numbers">
     <label for="first_1">first numbers</label>
     <input
-            type="text"
-            id="first_1"
-            class="input__style"
-            placeholder="first number"/>
+        type="text"
+        id="first_1"
+        class="input__style"
+        placeholder="first number"/>
     <label for="second_1">second numbers</label>
     <input
-            type="text"
-            id="second_1"
-            class="input__style"
-            placeholder="second number"/>
+        type="text"
+        id="second_1"
+        class="input__style"
+        placeholder="second number"/>
     <input
-            type="button"
-            value="to count"
-            class="input__style"
-            onclick="sumOfNumbers_1()"/>
+        type="button"
+        value="to count"
+        class="input__style"
+        onclick="sumOfNumbers_1()"/>
     <p id="sum_1" class="input__style"></p>
 </div>
 <div class="div__for_numbers" id="div__tree">
     <input
-            type="button"
-            value="click me"
-            class="input__style"
-            onclick="treeBild()"/>
+        type="button"
+        value="click me"
+        class="input__style"
+        onclick="treeBild()"/>
 </div>
 <div class="div__for_numbers">
     <label>enter secunds
         <input
-                type="text"
-                id="input__data"
-                class="input__style"
-                placeholder="secunds"/>
+            type="text"
+            id="input__data"
+            class="input__style"
+            placeholder="secunds"/>
     </label>
     <input
-            type="button"
-            onclick="timeOutOfSeconds()"
-            class="input__style"
-            value="new Date"/>
+        type="button"
+        onclick="timeOutOfSeconds()"
+        class="input__style"
+        value="new Date"/>
     <p id="p__date" class="input__style"></p>
 </div>
 <div class="div__for_numbers">
     <label>enter age
         <input
-                type="text"
-                id="age__data"
-                class="input__style"
-                placeholder="age"/>
+            type="text"
+            id="age__data"
+            class="input__style"
+            placeholder="age"/>
     </label>
     <input
-            type="button"
-            onclick="ageOutput()"
-            class="input__style"
-            value="your age"/>
+        type="button"
+        onclick="ageOutput()"
+        class="input__style"
+        value="your age"/>
     <p id="p__age" class="input__style"></p>
 </div>
 <div class="div__for_numbers">
+    <p>please enter the dates in the format yyyy,mm,dd,hh,mm,ss</p>
     <label>first date
         <input
-                type="text"
-                id="first_date"
-                class="input__style"
-                placeholder="first date"/>
+            type="text"
+            id="first_date"
+            class="input__style"
+            title="first date"
+            placeholder="yyyy,mm,dd,hh,mm,ss"/>
     </label>
     <label>second date
         <input
-                type="text"
-                id="second_date"
-                class="input__style"
-                placeholder="second date"/>
+            type="text"
+            id="second_date"
+            class="input__style"
+            title="second date"
+            placeholder="yyyy,mm,dd,hh,mm,ss"/>
         <input
-                type="button"
-                class="input__style"
-                onclick="dateDifference()"
-                value="timeout"/>
+            type="button"
+            class="input__style"
+            onclick="dateDifference()"
+            value="timeout"/>
         <p id="p__date_1" class="input__style"></p>
 </div>
 <div id="parent_div" class="div__for_numbers">
-    <label>enter date born
+    <label>enter date born in the format yyyy/mm/dd
         <input
-                type="text"
-                id="date_for_zodiak"
-                class="input__style"
-                placeholder="enter date born"/>
+            type="text"
+            id="date_for_zodiak"
+            class="input__style"
+            title="date born"
+            placeholder="yyyy/mm/dd"/>
     </label>
     <input
-            type="button"
-            class="input__style"
-            onclick="dateForZodiak()"
-            value="you zodiak"/>
+        type="button"
+        class="input__style"
+        onclick="dateForZodiak()"
+        value="you zodiak"/>
     <p id="p_zodiak"></p>
     <div id="zodiak">
     </div>
@@ -126,85 +130,86 @@
 <div id="div_chess" class="div__for_numbers">
     <label>enter height board
         <input
-                type="text"
-                id="height_chess"
-                class="input__style"
-                placeholder="height board"/>
+            type="text"
+            id="height_chess"
+            class="input__style"
+            placeholder="height board"/>
     </label>
     <label>enter width board
         <input
-                type="text"
-                id="width_chess"
-                class="input__style"
-                placeholder="width board"/>
+            type="text"
+            id="width_chess"
+            class="input__style"
+            placeholder="width board"/>
     </label>
     <input
-            type="button"
-            class="input__style"
-            onclick="buildCheckBoard()"
-            value="create board"/>
+        type="button"
+        class="input__style"
+        onclick="buildCheckBoard()"
+        value="create board"/>
     <div id="div__board">
     </div>
 </div>
 <div class="div__for_numbers">
     <label>entrances
         <input
-                type="text"
-                id="entrances"
-                class="input__style"
-                placeholder="entrances"/>
+            type="text"
+            id="entrances"
+            class="input__style"
+            placeholder="entrances"/>
     </label>
     <label>apartaments on the floor
         <input
-                type="text"
-                id="on_the_floor"
-                class="input__style"
-                placeholder="apartaments on the floor"/>
+            type="text"
+            id="on_the_floor"
+            class="input__style"
+            placeholder="apartaments on the floor"/>
     </label>
     <label>floors in the house
         <input
-                type="text"
-                id="floors_house"
-                class="input__style"
-                placeholder="floors in the house"/>
+            type="text"
+            id="floors_house"
+            class="input__style"
+            placeholder="floors in the house"/>
     </label>
     <label>number for apartament
         <input
-                type="text"
-                id="apartament"
-                class="input__style"
-                placeholder="number for apartament"/>
+            type="text"
+            id="apartament"
+            class="input__style"
+            placeholder="number for apartament"/>
     </label>
     <input
-            type="button"
-            class="input__style"
-            onclick="floorForApartament()"
-            value="click me"/>
+        type="button"
+        class="input__style"
+        onclick="floorForApartament()"
+        value="click me"/>
     <p id="p_floor"></p>
 </div>
 <div class="div__for_numbers">
     <label>
-        <input type="text"
-               id="input_number"
-               class="input__style"/>
+        <input
+            type="text"
+            id="input_number"
+            class="input__style"/>
         enter numbers
     </label>
-    <input type="button"
-           class="input__style"
-           onclick="sumForNumber()"
-           value="to count"
-    />
+    <input
+        type="button"
+        class="input__style"
+        onclick="sumForNumber()"
+        value="to count"/>
     <p id="p_number" class="input__style"></p>
 </div>
 <div id="div_for_links" class="div__for_numbers">
     <label for="text_area">enter links</label>
     <textarea
-            id="text_area"
-            class="input__style"
-            onblur="linksToList()"
-            placeholder="enter links"
-            rows="7"
-            cols="45"></textarea>
+        id="text_area"
+        class="input__style"
+        onblur="linksToList()"
+        placeholder="enter links"
+        rows="7"
+        cols="45"></textarea>
     <ul id="list_for_links"></ul>
 </div>
 </body>
