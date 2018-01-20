@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    -webkit-user-select: auto;
+}
+.content {
+    position: absolute;
+    top: 100px;
+    left: 300px;
+}
+
+.upper_div {
+    position: absolute;
+    min-width: 100px;
+    max-width: 250px;
+    min-height: 30px;
+    max-height: 100px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.upper_div::after {
+    content: '';
+    position: absolute; /* Абсолютное позиционирование */
+    left: 20px; bottom: -20px; /* Положение треугольника */
+    border: 10px solid transparent; /* Прозрачные границы */
+    border-top: 10px solid white; /* Добавляем треугольник */
+}
+
+.upper_div_textarea {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid white;
+    display: block;
+}
+
+.div_for_text {
+    word-wrap: break-word;
+    width: 100%;
+}

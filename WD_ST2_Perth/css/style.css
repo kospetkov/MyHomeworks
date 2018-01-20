@@ -1,3 +1,23 @@
+@font-face {
+    font-family: Kaushan Script;
+    src: url('../font/google_fonts/KaushanScript-Regular.otf');
+}
+
+@font-face {
+    font-family: BLACKJAR;
+    src: url('../font/google_fonts/BLACKJAR.TTF');
+}
+
+@font-face {
+    font-family: Proxima Nova;
+    src: url('../font/google_fonts/Proxima Nova Light.otf');
+}
+
+@font-face {
+    font-family: Proxima Nova Bold;
+    src: url('../font/google_fonts/Proxima Nova Bold.otf');
+}
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -9,24 +29,329 @@ html, body {
 }
 
 .container {
-    flex: 1 0 auto;
     width: 980px;
     margin: 0 auto;
-    min-height: 100px;
-    border: 10px;
-    border-color: saddlebrown;
+    position: relative;
+}
+
+header .container {
+    background-image: url("../perth_template/blue-pattern.jpg");
 }
 
 header {
     background-image: url("../perth_template/blue-pattern.jpg");
-}
-
-header div {
-
+    width: 100%;
 }
 
 .p_div {
-    height: 100px;
+    height: 105px;
     width: 100px;
+    background-color: white;
+    color: #02aae8;
+    text-align: center;
+    font-size: 50px;
+    font-family: Kaushan Script, serif;
+    border-bottom: 5px solid #00abe9;
+    box-shadow: 15px 12px 0 -2px #01b1ea;
+    cursor: pointer;
+}
+
+.container_for_header {
+    height: 651px;
+}
+
+.gamburger_in_div {
+    position: absolute;
+    top: 36px;
+    right: 40px;
+    color: white;
+    font-size: 14px;
+}
+
+.h1_header {
+    position: absolute;
+    top: 152px;
+    right: 34px;
+    font-family: BLACKJAR, Verdana;
+    font-size: 70px;
+    font-weight: 100;
+    color: white;
+}
+
+.h4_header {
+    position: absolute;
+    top: 275px;
+    right: 40px;
+    left: 210px;
+    font-family: "Proxima Nova", Light;
+    font-size: 35px;
+    font-weight: 100;
+    color: white;
+}
+
+.h4_span {
+    font-family: KaushanScript-Regular;
+    font-size: 35px;
+}
+
+.button_header {
+    position: absolute;
+    top: 364px;
+    right: 40px;
+    height: 58px;
+    width: 174px;
+    background-image: url("../perth_template/blue-pattern.jpg");
+    color: white;
+    font-size: 15px;
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+.button_span_header {
+    font-size: 14px;
+    margin: 0 9px 0 0;
+}
+
+.image_header {
+    position: absolute;
+    left: 71px;
+    top: 384px;
+}
+
+.ipad_section {
+    background-color: #f4f4f4;
+    width: 100%;
+}
+
+.section_for_ipad {
+    //position: relative;
+    background-color: #f4f4f4;
+    //width: 100%;
+    height: 650px;
+}
+
+.h1_ipad_section {
+    position: absolute;
+    top: 138px;
+    font-size: 41px;
+    font-weight: 100;
+}
+
+.p1_ipad_section {
+    position: absolute;
+    font-size: 18px;
+    top: 214px;
+    right: 430px;
+}
+
+.span_ipad_section {
+    position: absolute;
+    top: 314px;
+    left: 1px;
+    width: 5px;
+    height: 67px;
+    background-image: url("../perth_template/blue-pattern.jpg");
+}
+
+.p2_ipad_section {
+    position: absolute;
+    top: 312px;
+    right: 430px;
+    left: 23px;
+    font-size: 18px;
+}
+
+.button_ipad_section {
+    position: absolute;
+    top: 452px;
+    left: 1px;
+    width: 173px;
+    height: 57px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #00c0a7;
+    border: 2px solid #00c0a7;
+    border-radius: 3px;
+    background-color: #f4f4f4;
+}
+
+.span_button_ipad_section {
+    margin: 0 4px 0 0;
+}
+
+.image_ipad_section {
+    position: absolute;
+    top: 151px;
+    left: 760px;
+}
+
+.devices_section {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+}
+
+.section_for_devices {
+    position: relative;
+    background-color: white;
+    height: 650px;
+}
+
+.h1_devices_section {
+    position: absolute;
+    top: 97px;
+    left: 544px;
+    font-size: 38px;
+    font-weight: 100;
+}
+
+.p1_devices_section {
+    position: absolute;
+    top: 179px;
+    left: 546px;
+    right: 90px;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.p2_devices_section {
+    position: absolute;
+    top: 253px;
+    left: 545px;
+    right: 90px;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.img_devices_section {
+    position: absolute;
+    top: 272px;
+    right: 359px;
+}
+
+.button_devices_section {
+    position: absolute;
+    top: 355px;
+    right: 211px;
+    height: 57px;
+    width: 224px;
+    background-color: white;
+    color: #ea4c89;
+    border: 2px solid #ea4c89;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.span_button_devices_section {
+    margin: 0 12px 0 0;
+}
+
+.green_section {
+    position: absolute;
+    background-image: url("../perth_template/green-pattern.jpg");
+    width: 100%;
+    top: 1951px;
+}
+
+.container_for_green_section {
+    position: relative;
+    height: 326px;
+    background-image: url("../perth_template/green-pattern.jpg");
+}
+
+.h1_green_section {
+    position: absolute;
+    top: 93px;
+    left: 292px;
+    color: white;
+    font-size: 37px;
+}
+
+.button_green_section {
+    position: absolute;
+    top: 170px;
+    left: 358px;
+    height: 57px;
+    width: 224px;
+    background-image: url("../perth_template/green-pattern.jpg");
+    color: white;
+    font-size: 15px;
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+.span_button_green_section {
+    font-size: 14px;
+    margin: 0 10px 0 0;
+}
+
+.icon_section {
+    position: absolute;
+    width: 100%;
+    background: #f4f4f4;
+    top: 2277px;
+}
+
+.container_for_icon_section {
+    position: relative;
+    background: #f4f4f4;
+    height: 648px;
+}
+
+.box_for_icons {
+    position: absolute;
+    top: 242px;
+    left: 306px;
+    display: flex;
+    flex-direction: row;
+}
+
+.circle_for_icon {
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    border: 3px solid black;
+    font-size: 25px;
+    text-align: center;
+    padding: 12px;
+    margin: 0 35px 0 0;
+}
+
+.input_icon_sektion {
+    position: absolute;
+    top: 365px;
+    left: 258px;
+}
+
+.label_icon_section {
+    font-size: 15px;
+    margin-right: 57px;
+}
+
+.email_icon_section {
+    height: 44px;
+    width: 165px;
+    border: 0px solid white;
+    background-color: white;
+}
+
+.a_icon_section {
+    color: #00c3ea;
+    padding: 10px 10px 10px 10px;
+}
+
+.span_icon_section {
+    position: absolute;
+    top: 12px;
+    left: 368px;
+}
+
+.linck_icon_section {
+    position: absolute;
+    top: 0px;
+    left: 370px;
+    height: 44px;
+    width: 44px;
     background-color: white;
 }
