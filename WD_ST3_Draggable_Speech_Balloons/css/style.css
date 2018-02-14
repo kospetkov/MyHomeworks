@@ -13,15 +13,18 @@ body {
 }
 .content {
     position: absolute;
+    width: 700px;
+    height: 436px;
     top: 100px;
     left: 300px;
+    background-image: url("../img/baccground.jpeg");
 }
 
 .upper_div {
     position: absolute;
-    min-width: 100px;
+    min-width: 50px;
     max-width: 250px;
-    min-height: 30px;
+    min-height: 20px;
     max-height: 100px;
     background-color: white;
     border-radius: 10px;
@@ -29,21 +32,47 @@ body {
 
 .upper_div::after {
     content: '';
-    position: absolute; /* Абсолютное позиционирование */
-    left: 20px; bottom: -20px; /* Положение треугольника */
-    border: 10px solid transparent; /* Прозрачные границы */
-    border-top: 10px solid white; /* Добавляем треугольник */
+    position: absolute;
+    left: 20px; bottom: -20px;
+    border: 10px solid transparent;
+    border-top: 10px solid white;
 }
 
 .upper_div_textarea {
-    width: 100px;
-    height: 30px;
-    border-radius: 10px;
-    border: 2px solid white;
-    display: block;
+    width: 50px;
+    height: 20px;
+   // border-radius: 10px;
+    //border: 2px solid white;
+    //display: block;
+    margin: 5px;
 }
 
 .div_for_text {
     word-wrap: break-word;
-    width: 100%;
+    //width: 100%;
+    padding: 5px;
+    position: absolute;
+    min-width: 50px;
+    max-width: 250px;
+    min-height: 20px;
+    max-height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.div_for_text::after {
+    content: '';
+    position: absolute;
+    left: 20px; bottom: -20px;
+    border: 10px solid transparent;
+    border-top: 10px solid white;
+}
+
+.p_for_text {
+    min-width: 50px;
+    max-width: 250px;
+    min-height: 20px;
+    max-height: 100px;
+    word-wrap: break-word;
 }
