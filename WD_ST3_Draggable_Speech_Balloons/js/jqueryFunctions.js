@@ -3,13 +3,12 @@ $(document).ready(function () {
         if (e.target.className !== 'content') {
             return;
         }
-        console.log(e);
-        let pos = $(this).offset();
+        let item = $(this);
+        let pos = item.offset();
         let elem_left = pos.left;
         let elem_top = pos.top;
         let x = e.pageX - elem_left;
         let y = e.pageY - elem_top;
-        console.log("X: " + x + " Y: " + y);
         let elem = $('<div>', {class: 'upper_div'});
         elem.offset({top: y, left: x});
         let input = $('<input>', {class: 'upper_div_textarea', type: 'textarea'});
@@ -17,7 +16,7 @@ $(document).ready(function () {
         p.attr({style: 'display: none;'});
         elem.append(input);
         elem.append(p);
-        $(this).append(elem);
+        item.append(elem);
         input.focus();
         $(elem).draggable({
             containment: 'parent',
@@ -31,43 +30,33 @@ $(document).ready(function () {
             let input = $(document.activeElement);
             let elem = input.parent();
             let value = input.val();
-            let y = elem.css('top');
-            let x = elem.css('left');
-            let myP = elem.find('.p_for_text');
+            let p = elem.find('.p_for_text');
             if (e.keyCode === 13) {
                 if (value.length === 0) {
                     elem.remove();
                 }
                 input.remove();
-                myP.text(value);
-                myP.css({display: 'block'});
+                p.text(value);
+                p.css({display: 'block'});
             }
-            else {
-                if (value.length === 0 && myP.find().length === 0 ) {
+            else if (e.keyCode === 27) {
+                if (value.length === 0 && p.length === 0 ) {
                     elem.remove();
-                } else if (myP.find().length !== 0) {
+                } else if (p.length > 0) {
                     input.remove();
-                    myP.text(value);
-                    myP.css({display: 'block'});
-                    //let p = $('<p>', {class: 'p_for_text'});
-                    //p.text(value);
-                    //elem.append(p);
+                    p.css({display: 'block'});
                 }
             }
         }
     });
     $('.content').on('dblclick', ".upper_div", function (e) {
         let item = $(this);
-        let myP = item.children();
-        let myPText = myP.text();
-        myP.attr({style: 'display: none;'});
-        let newInput = $('<input>', {class: 'upper_div_textarea'});
-        newInput.val(myPText);
-        item.append(newInput);
+        let p = item.children();
+        let pText = p.text();
+        p.attr({style: 'display: none;'});
+        let input = $('<input>', {class: 'upper_div_textarea'});
+        input.val(pText);
+        item.append(input);
         item.children().focus();
-        let y = item.css('top');
-        let x = item.css('left');
-        let newDiv = $('<div>', {class: 'upper_div'});
-        newDiv.css({'top': y, 'left': x});
     });
 });
