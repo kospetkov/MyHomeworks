@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    var id = 0;
     $('body').on('dblclick', ".content", function (e) {
         if (e.target.className !== 'content') {
             return;
@@ -34,10 +35,23 @@ $(document).ready(function () {
             if (e.keyCode === 13) {
                 if (value.length === 0) {
                     elem.remove();
+                    
                 }
                 input.remove();
                 p.text(value);
                 p.css({display: 'block'});
+                id ++;
+                elem.attr({id: 'id_' + id});
+                let y = elem.css('top');
+                let x = elem.css('left');
+                $.ajax({
+                    type: "POST",
+                    url: 'php/addInJson.php',
+                    data: {"id": id,
+                    "top": y,
+                    "left": x,
+                    "msg": value}
+                });
             }
             else if (e.keyCode === 27) {
                 if (value.length === 0 && p.length === 0 ) {
