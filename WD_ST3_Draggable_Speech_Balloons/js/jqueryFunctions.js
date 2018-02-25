@@ -21,6 +21,19 @@ $(document).ready(function () {
         input.focus();
         $(elem).draggable({
             containment: 'parent',
+            stop: function(event, ui) {
+                let x = ui.position.left;
+                let y = ui.position.top;
+                let idElem = +elem.attr('id').replace('id_', '');
+                $.ajax({
+                    type: 'POST',
+                    url: 'php/updateCoordInJson.php',
+                    data: {
+                        "id": idElem,
+                        "top": y,
+                        "left": x}
+                });
+            },
         });
     });
     $('.content').on('keydown', function (e) {
@@ -34,24 +47,48 @@ $(document).ready(function () {
             let p = elem.find('.p_for_text');
             if (e.keyCode === 13) {
                 if (value.length === 0) {
+                    let idElem = +elem.attr('id').replace('id_', '');
                     elem.remove();
-                    
+                    $.ajax({
+                        type: 'POST',
+                        url: 'php/deletingInJson.php',
+                        data: {"id": idElem}
+                    });
+                } else {
+                    input.remove();
+                    p.text(value);
+                    p.css({display: 'block'});
+                    if (elem.attr('id')) {
+                        let y = elem.css('top');
+                        let x = elem.css('left');
+                        let elemId = +elem.attr('id').replace('id_', '');
+                        $.ajax({
+                            type: 'POST',
+                            url: 'php/addInJson.php',
+                            data: {
+                                "id": elemId,
+                                "top": y,
+                                "left": x,
+                                "msg": value
+                            }
+                        });
+                    } else {
+                        elem.attr({id: 'id_' + id});
+                        let y = elem.css('top');
+                        let x = elem.css('left');
+                        $.ajax({
+                            type: 'POST',
+                            url: 'php/addInJson.php',
+                            data: {
+                                "id": id,
+                                "top": y,
+                                "left": x,
+                                "msg": value
+                            }
+                        });
+                        id ++;
+                    }
                 }
-                input.remove();
-                p.text(value);
-                p.css({display: 'block'});
-                id ++;
-                elem.attr({id: 'id_' + id});
-                let y = elem.css('top');
-                let x = elem.css('left');
-                $.ajax({
-                    type: "POST",
-                    url: 'php/addInJson.php',
-                    data: {"id": id,
-                    "top": y,
-                    "left": x,
-                    "msg": value}
-                });
             }
             else if (e.keyCode === 27) {
                 if (value.length === 0 && p.length === 0 ) {
