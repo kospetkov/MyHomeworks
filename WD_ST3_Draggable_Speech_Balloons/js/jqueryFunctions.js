@@ -1,5 +1,39 @@
 $(document).ready(function () {
     var id = 0;
+    $.getJSON('json/data.json', function (data) {
+        for (var i in data) {
+            let item = data[i];
+            let y = item.top;
+            let x = item.left;
+            let massadg = item.msg;
+            id = item.ident;
+            let elem = $('<div>', {class: 'upper_div'});
+            elem.attr({id: 'id_' + i});
+            elem.css({top: y, left: x});
+            let p = $('<p>', {class: 'p_for_text'});
+            p.text(massadg);
+            elem.append(p);
+            $('.content').append(elem);
+            $(elem).draggable({
+                containment: 'parent',
+                stop: function(event, ui) {
+                    let x = ui.position.left;
+                    let y = ui.position.top;
+                    let idElem = +elem.attr('id').replace('id_', '');
+                    $.ajax({
+                        type: 'POST',
+                        url: 'php/updateCoordInJson.php',
+                        data: {
+                            "id": idElem,
+                            "top": y,
+                            "left": x,
+                            "ident": idElem
+                        }
+                    });
+                },
+            });
+        }
+    });
     $('body').on('dblclick', ".content", function (e) {
         if (e.target.className !== 'content') {
             return;
@@ -31,7 +65,9 @@ $(document).ready(function () {
                     data: {
                         "id": idElem,
                         "top": y,
-                        "left": x}
+                        "left": x,
+                        "ident": idElem
+                    }
                 });
             },
         });
@@ -43,6 +79,8 @@ $(document).ready(function () {
             }
             let input = $(document.activeElement);
             let elem = input.parent();
+            let y = elem.css('top');
+            let x = elem.css('left');
             let value = input.val();
             let p = elem.find('.p_for_text');
             if (e.keyCode === 13) {
@@ -59,23 +97,21 @@ $(document).ready(function () {
                     p.text(value);
                     p.css({display: 'block'});
                     if (elem.attr('id')) {
-                        let y = elem.css('top');
-                        let x = elem.css('left');
-                        let elemId = +elem.attr('id').replace('id_', '');
+                        let idElem = +elem.attr('id').replace('id_', '');
                         $.ajax({
                             type: 'POST',
                             url: 'php/addInJson.php',
                             data: {
-                                "id": elemId,
+                                "id": idElem,
                                 "top": y,
                                 "left": x,
-                                "msg": value
+                                "msg": value,
+                                "ident": idElem
                             }
                         });
                     } else {
                         elem.attr({id: 'id_' + id});
-                        let y = elem.css('top');
-                        let x = elem.css('left');
+                        id ++;
                         $.ajax({
                             type: 'POST',
                             url: 'php/addInJson.php',
@@ -83,10 +119,10 @@ $(document).ready(function () {
                                 "id": id,
                                 "top": y,
                                 "left": x,
-                                "msg": value
+                                "msg": value,
+                                "ident": id
                             }
                         });
-                        id ++;
                     }
                 }
             }
