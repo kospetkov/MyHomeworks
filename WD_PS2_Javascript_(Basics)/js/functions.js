@@ -337,8 +337,8 @@ function buildCheckBoard() {
     div = document.createElement('div');
     div.id = "div__board";
     div.className = "chess_style";
-    div.style.height = inputData1 * 60 + 'px';
-    div.style.width = inputData2 * 45 + 'px';
+    div.style.height = inputData1 * 50 + 'px';
+    div.style.width = inputData2 * 50 + 'px';
     for (var i = 0; i < inputData1; i++) {
         for (var j = 0; j < inputData2; j++) {
             var divChess = document.createElement('div');
@@ -402,13 +402,16 @@ function linksToList() {
     var listLength = list.length;
     var parent = document.getElementById('div_for_links');
     var ul = document.getElementById('list_for_links');
+    parent.removeChild(ul);
+    var newUl = document.createElement('ul');
+    newUl.setAttribute('id', 'list_for_links');
     for (var j = 0; j < listLength; j++) {
         var li = document.createElement('li');
         li.className = "link_style";
         li.innerHTML = '<a href="//' + list[j] + '">' + list[j] + '</a>';
-        ul.appendChild(li);
+        newUl.appendChild(li);
     }
-    parent.appendChild(ul);
+    parent.appendChild(newUl);
 }
 
 

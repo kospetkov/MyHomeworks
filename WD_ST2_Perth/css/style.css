@@ -90,8 +90,9 @@ header {
 }
 
 .h4_span {
-    font-family: KaushanScript-Regular;
+    font-family: Proxima Nova Bold, serif;
     font-size: 35px;
+    font-style: italic;
 }
 
 .button_header {
@@ -262,8 +263,10 @@ header {
 
 .h1_green_section {
     position: absolute;
-    top: 93px;
-    left: 292px;
+    font-family: "Proxima Nova", Light;
+    letter-spacing: 2px;
+    top: 91px;
+    left: 294px;
     color: white;
     font-size: 37px;
 }
@@ -338,7 +341,8 @@ header {
 
 .a_icon_section {
     color: #00c3ea;
-    padding: 10px 10px 10px 10px;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
 .span_icon_section {
@@ -354,4 +358,9 @@ header {
     height: 44px;
     width: 44px;
     background-color: white;
+}
+
+.fa-envelope {
+    line-height: 43px;
+    padding-left: 4px;
 }
