@@ -12,9 +12,8 @@ const IMAGES = [
 ];
 
 $(document).ready(function () {
-    var items = '';
-    var size = IMAGES.length;
-    for (var i = 0; i < size; i++) {
+    let items = '';
+    for (let i = 0; i < IMAGES.length; i++) {
         items += '<li><img id="li_' + (i + 1) + '" src="' + API_URL +
             SMALL_SIZE + IMAGES[i] + '" alt=""/></li>';
         if (i === 0) {
@@ -24,10 +23,10 @@ $(document).ready(function () {
     $('ul').append(items);
     $('#li_1').parent().addClass('current');
     $('.slider-previews img').click(function () {
-        var current = $(this);
+        let current = $(this);
         $('li').removeClass('current');
         current.parent().addClass('current');
-        var imgSrc = current.attr('src').replace(SMALL_SIZE, BIG_SIZE);
+        let imgSrc = current.attr('src').replace(SMALL_SIZE, BIG_SIZE);
         $('.slider-current img').attr('src', imgSrc);
     });
 
@@ -35,7 +34,7 @@ $(document).ready(function () {
         if (e.keyCode !== 37 && e.keyCode !== 39) {
             return;
         }
-        var index = +$('.current img').attr('id').replace('li_', '');
+        let index = +$('.current img').attr('id').replace('li_', '');
         $('li').removeClass('current');
         if (e.keyCode === 37) {
             if (index <= 1) {
@@ -54,8 +53,8 @@ $(document).ready(function () {
         }
     });
     function imagesChange(index) {
-        var selector = $('#li_' + index + '');
-        var newSrc = selector.attr('src').replace(SMALL_SIZE, BIG_SIZE);
+        let selector = $('#li_' + index + '');
+        let newSrc = selector.attr('src').replace(SMALL_SIZE, BIG_SIZE);
         selector.parent().addClass('current');
         $('.slider-current img').attr('src', newSrc);
     }

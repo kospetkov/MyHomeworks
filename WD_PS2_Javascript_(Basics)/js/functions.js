@@ -119,11 +119,23 @@ function ageOutput() {
 function dateDifference() {
     var inputData1 = String(document.getElementById('first_date').value);
     var inputData2 = String(document.getElementById('second_date').value);
-    var dat1 = inputData1.split(',');
-    var date1 = new Date(dat1[0], dat1[1], dat1[2], dat1[3], dat1[4], dat1[5], 0);
-    var dat2 = inputData2.split(',');
-    var date2 = new Date(dat2[0], dat2[1], dat2[2], dat2[3], dat2[4], dat2[5], 0);
-    if ((date1 == 'Invalid Date') || (date2 == 'Invalid Date') || (dat1.length != 6) || (dat2.length != 6))  {
+    var dat1 = new Date(inputData1);
+    var date1 = [];
+    date1[0] = +dat1.getFullYear();
+    date1[1] = +dat1.getMonth() + 1;
+    date1[2] = +dat1.getDate();
+    date1[3] = +dat1.getHours();
+    date1[4] = +dat1.getMinutes();
+    date1[5] = +dat1.getSeconds();
+    var dat2 = new Date(inputData2);
+    var date2 = [];
+    date2[0] = +dat2.getFullYear();
+    date2[1] = +dat2.getMonth() + 1;
+    date2[2] = +dat2.getDate();
+    date2[3] = +dat2.getHours();
+    date2[4] = +dat2.getMinutes();
+    date2[5] = +dat2.getSeconds();
+    if ((dat1 == 'Invalid Date') || (date2 == 'Invalid Date') || (date1.length != 6) || (date2.length != 6))  {
         document.getElementById('p__date_1').innerText = "you enter not correct data";
         return;
     }
@@ -133,8 +145,8 @@ function dateDifference() {
     const SECUND_IN_DAY = 86400;
     const SECUND_IN_MONTH = 2592000;
     const SECUND_IN_YEAR = 31536000;
-    var dateInSecund1 = ((+dat1[0] * SECUND_IN_YEAR) + (+dat1[1] * SECUND_IN_MONTH) + (+dat1[2] * SECUND_IN_DAY) + (+dat1[3] * SECUND_IN_HOUR) + (+dat1[4] * SECUND_IN_MINUTE) + (+dat1[5]));
-    var dateInSecund2 = ((+dat2[0] * SECUND_IN_YEAR) + (+dat2[1] * SECUND_IN_MONTH) + (+dat2[2] * SECUND_IN_DAY) + (+dat2[3] * SECUND_IN_HOUR) + (+dat2[4] * SECUND_IN_MINUTE) + (+dat2[5]));
+    var dateInSecund1 = +((+date1[0] * SECUND_IN_YEAR) + (+date1[1] * SECUND_IN_MONTH) + (+date1[2] * SECUND_IN_DAY) + (+date1[3] * SECUND_IN_HOUR) + (+date1[4] * SECUND_IN_MINUTE) + (+date1[5]));
+    var dateInSecund2 = +((+date2[0] * SECUND_IN_YEAR) + (+date2[1] * SECUND_IN_MONTH) + (+date2[2] * SECUND_IN_DAY) + (+date2[3] * SECUND_IN_HOUR) + (+date2[4] * SECUND_IN_MINUTE) + (+date2[5]));
     var resultInSecund = Math.abs(dateInSecund1 - dateInSecund2);
     year = Math.floor(resultInSecund / SECUND_IN_YEAR);
     month = Math.floor((resultInSecund - (year * SECUND_IN_YEAR)) / SECUND_IN_MONTH);
