@@ -173,10 +173,12 @@ function dateForZodiak() {
     var inputData = document.getElementById('date_for_zodiak').value;
     var dateArray = inputData.split('/');
     var date = new Date(dateArray[0], (dateArray[1] - 1), dateArray[2]);
-    if ((date === 'Invalid Date') || !(dateArray[1] == (date.getMonth()) + 1)) {
-        document.getElementById('p_zodiak').innerText = "you enter not correct data";
+    var error = document.getElementById('p_zodiak');
+    if ((date === 'Invalid Date') || !(dateArray[1] == (date.getMonth()) + 1) || (inputData === '')) {
+        error.innerText = "you enter not correct data";
         return;
     }
+    error.innerText = '';
     var month = date.getMonth();
     var day = date.getDate();
     var div = document.getElementById('zodiak');
@@ -340,8 +342,9 @@ function buildCheckBoard() {
     var inputData1 = +document.getElementById('height_chess').value;
     console.log(typeof(inputData1));
     var inputData2 = +document.getElementById('width_chess').value;
-    if (!inputData1 || !inputData2) {
+    if (!inputData1 || !inputData2 || (inputData1 === '') || (inputData2 === '')) {
         document.getElementById('div__board').innerText = "you enter not correct data";
+        return;
     }
     var div = document.getElementById('div__board');
     var parent = document.getElementById('div_chess');
@@ -372,7 +375,7 @@ function floorForApartament() {
     var onTheFloor = Number(document.getElementById('on_the_floor').value);
     var floorsHouse = Number(document.getElementById('floors_house').value);
     var apartament = Number(document.getElementById('apartament').value);
-    if ((entrances * onTheFloor * floorsHouse) < apartament) {
+    if (((entrances * onTheFloor * floorsHouse) < apartament) || !entrances || !onTheFloor || !floorsHouse || !apartament) {
         document.getElementById('p_floor').innerText = "you enter not correct data";
         return;
     }
