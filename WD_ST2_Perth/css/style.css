@@ -28,8 +28,12 @@ html, body {
     height: 100%;
 }
 
+body {
+    font-family: Proxima Nova, Serif;
+}
+
 .container {
-    width: 980px;
+    max-width: 940px;
     margin: 0 auto;
     position: relative;
 }
@@ -54,6 +58,8 @@ header {
     border-bottom: 5px solid #00abe9;
     box-shadow: 15px 12px 0 -2px #01b1ea;
     cursor: pointer;
+    display: inline-block;
+    float: left;
 }
 
 .container_for_header {
@@ -61,32 +67,30 @@ header {
 }
 
 .gamburger_in_div {
-    position: absolute;
-    top: 36px;
-    right: 40px;
     color: white;
     font-size: 14px;
+    display: inline-block;
+    float: right;
+    margin-top: 35px;
 }
 
 .h1_header {
-    position: absolute;
-    top: 152px;
-    right: 34px;
     font-family: BLACKJAR, Verdana;
     font-size: 70px;
     font-weight: 100;
     color: white;
+    float: right;
+    margin-top: 152px;
+    margin-right: -33px;
 }
 
 .h4_header {
-    position: absolute;
-    top: 275px;
-    right: 40px;
-    left: 210px;
+    margin-top: 19px;
     font-family: "Proxima Nova", Light;
     font-size: 35px;
     font-weight: 100;
     color: white;
+    float: right;
 }
 
 .h4_span {
@@ -96,9 +100,9 @@ header {
 }
 
 .button_header {
-    position: absolute;
-    top: 364px;
-    right: 40px;
+    float: right;
+    margin-left: 40px;
+    margin-top: 45px;
     height: 58px;
     width: 174px;
     background-image: url("../perth_template/blue-pattern.jpg");
@@ -114,58 +118,63 @@ header {
 }
 
 .image_header {
-    position: absolute;
-    left: 71px;
-    top: 384px;
+    margin-top: 320px;
+    margin-left: -29px;
+    position: relative;
+    z-index: 0;
 }
 
 .ipad_section {
     background-color: #f4f4f4;
     width: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom -78px right -26px;
+    background-image: url(../perth_template/ipad.png);
+    position: relative;
 }
 
 .section_for_ipad {
-    //position: relative;
-    background-color: #f4f4f4;
-    //width: 100%;
-    height: 650px;
+    min-height: 650px;
 }
 
 .h1_ipad_section {
-    position: absolute;
-    top: 138px;
     font-size: 41px;
-    font-weight: 100;
+    font-weight: bold;
+    letter-spacing: -1px;
+    padding-top: 137px;
 }
 
 .p1_ipad_section {
-    position: absolute;
-    font-size: 18px;
-    top: 214px;
-    right: 430px;
+    max-width: 541px;
+    min-width: 200px;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-top: 24px;
+}
+
+.p_span {
+    display: flex;
+    margin-top: 25px;
+    max-width: 567px;
+    min-width: 250px;
 }
 
 .span_ipad_section {
-    position: absolute;
-    top: 314px;
-    left: 1px;
-    width: 5px;
-    height: 67px;
+    width: 7px;
+    height: 75px;
     background-image: url("../perth_template/blue-pattern.jpg");
 }
 
 .p2_ipad_section {
-    position: absolute;
-    top: 312px;
-    right: 430px;
-    left: 23px;
-    font-size: 18px;
+    margin-left: 21px;
+    font-size: 17px;
+    max-width: 615px;
+    min-width: 200px;
+    line-height: 1.5;
+    font-style: italic;
 }
 
 .button_ipad_section {
-    position: absolute;
-    top: 452px;
-    left: 1px;
     width: 173px;
     height: 57px;
     font-size: 15px;
@@ -174,66 +183,53 @@ header {
     border: 2px solid #00c0a7;
     border-radius: 3px;
     background-color: #f4f4f4;
+    margin-top: 65px;
 }
 
 .span_button_ipad_section {
     margin: 0 4px 0 0;
 }
 
-.image_ipad_section {
-    position: absolute;
-    top: 151px;
-    left: 760px;
-}
-
 .devices_section {
-    position: absolute;
     background-color: white;
     width: 100%;
+    height: 517px;
+    background-repeat: no-repeat;
+    background-position: bottom -61px left -34px;
+    background-image: url(../perth_template/devices.png);
+    position: relative;
 }
 
 .section_for_devices {
-    position: relative;
-    background-color: white;
-    height: 650px;
+    min-height: 650px;
 }
 
 .h1_devices_section {
-    position: absolute;
-    top: 97px;
-    left: 544px;
     font-size: 38px;
     font-weight: 100;
+    float: right;
+    margin-top: -36px;
+    margin-right: 115px;
 }
 
 .p1_devices_section {
-    position: absolute;
-    top: 179px;
-    left: 546px;
-    right: 90px;
-    font-size: 16px;
-    font-weight: 100;
+    font-size: 17px;
+    float: right;
+    margin-top: 33px;
+    margin-left: 545px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 24px;
 }
 
 .p2_devices_section {
-    position: absolute;
-    top: 253px;
-    left: 545px;
-    right: 90px;
     font-size: 16px;
-    font-weight: 100;
-}
-
-.img_devices_section {
-    position: absolute;
-    top: 272px;
-    right: 359px;
+    margin-top: 133px;
+    margin-left: 545px;
+    line-height: 24px;
 }
 
 .button_devices_section {
-    position: absolute;
-    top: 355px;
-    right: 211px;
     height: 57px;
     width: 224px;
     background-color: white;
@@ -242,6 +238,24 @@ header {
     border-radius: 3px;
     font-size: 14px;
     font-weight: bold;
+    float: right;
+    margin-top: 83px;
+    margin-right: 171px;
+}
+
+.button_devices_section1 {
+    height: 57px;
+    width: 224px;
+    background-color: white;
+    color: #ea4c89;
+    border: 2px solid #ea4c89;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+    margin-top: 80px;
+    margin-left: 307px;
+    display: none;
 }
 
 .span_button_devices_section {
@@ -249,32 +263,24 @@ header {
 }
 
 .green_section {
-    position: absolute;
     background-image: url("../perth_template/green-pattern.jpg");
     width: 100%;
-    top: 1951px;
 }
 
 .container_for_green_section {
-    position: relative;
-    height: 326px;
+    min-height: 326px;
     background-image: url("../perth_template/green-pattern.jpg");
 }
 
 .h1_green_section {
-    position: absolute;
-    font-family: "Proxima Nova", Light;
     letter-spacing: 2px;
-    top: 91px;
-    left: 294px;
     color: white;
     font-size: 37px;
+    padding-top: 93px;
+    padding-left: 294px;
 }
 
 .button_green_section {
-    position: absolute;
-    top: 170px;
-    left: 358px;
     height: 57px;
     width: 224px;
     background-image: url("../perth_template/green-pattern.jpg");
@@ -282,6 +288,8 @@ header {
     font-size: 15px;
     border: 2px solid white;
     border-radius: 3px;
+    margin-top: 32px;
+    margin-left: 358px;
 }
 
 .span_button_green_section {
@@ -290,22 +298,17 @@ header {
 }
 
 .icon_section {
-    position: absolute;
     width: 100%;
     background: #f4f4f4;
-    top: 2277px;
 }
 
 .container_for_icon_section {
-    position: relative;
-    background: #f4f4f4;
     height: 648px;
+    padding-top: 242px;
+    padding-left: 306px;
 }
 
 .box_for_icons {
-    position: absolute;
-    top: 242px;
-    left: 306px;
     display: flex;
     flex-direction: row;
 }
@@ -322,14 +325,16 @@ header {
 }
 
 .input_icon_sektion {
-    position: absolute;
-    top: 365px;
-    left: 258px;
+    display: flex;
+    margin-left: -48px;
+    margin-top: 68px;
+    letter-spacing: 1px;
 }
 
 .label_icon_section {
     font-size: 15px;
-    margin-right: 57px;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .email_icon_section {
@@ -337,6 +342,10 @@ header {
     width: 165px;
     border: 0px solid white;
     background-color: white;
+    font-style: italic;
+    letter-spacing: 0.7px;
+    margin-left: 26px;
+    border-radius: 5px 0 0 5px;
 }
 
 .a_icon_section {
@@ -346,21 +355,240 @@ header {
 }
 
 .span_icon_section {
-    position: absolute;
-    top: 12px;
-    left: 368px;
+    opacity: .4;
+    margin-left: -4px;
 }
 
 .linck_icon_section {
-    position: absolute;
-    top: 0px;
-    left: 370px;
     height: 44px;
     width: 44px;
     background-color: white;
+    margin-left: -4px;
 }
 
 .fa-envelope {
     line-height: 43px;
     padding-left: 4px;
+}
+
+.footer_section {
+    width: 100%;
+    min-height: 100px;
+}
+
+.box_for_footer {
+    font-weight: bold;
+    padding-left: 328px;
+    padding-top: 45px;
+}
+
+.fa-copyright {
+    font-size: 10px;
+}
+
+.span_for_year {
+    font-size: 12px;
+}
+
+.span_for_perth {
+    font-size: 12px;
+    color: #00c3ea;
+    letter-spacing: .9px;
+}
+
+.span_for_footer {
+    font-size: 12px;
+    font-style: italic;
+    letter-spacing: .6px;
+}
+
+.box_for_icons_footer {
+    background-color: #f4f4f4;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    margin-top: -30px;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.fa-angle-up {
+    line-height: 38px;
+    padding-left: 14px;
+}
+
+
+
+@media screen and (max-width: 1060px) {
+    .button_devices_section {
+        margin-right: 45px;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .container {
+        width: 785px;
+    }
+
+    .p_div {
+        margin-left: 100px;
+    }
+
+    .gamburger_in_div {
+        margin-right: 100px;
+    }
+
+    .ipad_section {
+        background-position: bottom -74px right 0px;
+    }
+
+    .button_header {
+        margin-right: 100px;
+    }
+
+    .image_header {
+        margin-left: 108px;
+    }
+
+    .h4_header {
+        margin-left: 100px;
+        font-size: 27px;
+        margin-right: 100px;
+    }
+
+    .h1_ipad_section {
+        font-size: 35px;
+        margin-left: 100px;
+        padding-top: 79px;
+    }
+
+    .p1_ipad_section {
+        width: 300px;
+        font-size: 14px;
+        margin-left: 50px;
+    }
+
+    .p2_ipad_section {
+        width: 300px;
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    .button_ipad_section {
+        margin-left: 50px;
+    }
+
+    .span_ipad_section {
+        height: 103px;
+        margin-left: 50px;
+    }
+
+    .h1_devices_section {
+        font-size: 35px;
+        margin-right: 342px;
+    }
+
+    .p2_devices_section, .p1_devices_section {
+        font-size: 14px;
+        margin-right: 262px;
+        margin-left: 185px;
+    }
+
+    .devices_section {
+        background-position: bottom -61px left 0;
+    }
+
+    .button_devices_section {
+        display: none;
+    }
+
+    .button_devices_section1 {
+        display: block;
+    }
+
+    .container_for_green_section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .h1_green_section {
+        padding-top: 0;
+        padding-left: 0;
+    }
+
+    .button_green_section {
+        margin-left: 0;
+        margin-top: 50px;
+    }
+
+    .container_for_icon_section {
+        padding-left: 231px;
+    }
+
+    .box_for_footer {
+        padding-left: 260px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .container {
+        width: 650px;
+    }
+
+    .p1_ipad_section {
+    }
+
+    .h4_header {
+        margin-left: 50px;
+        font-size: 25px;
+        margin-right: 50px;
+    }
+
+    .container_for_header {
+        height: 515px;
+    }
+
+    .h1_ipad_section {
+        font-size: 32px;
+        margin-left: 181px;
+        padding-top: 16px;
+    }
+
+    .ipad_section {
+        background-position: bottom 5px right 120px;
+    }
+
+    .p1_ipad_section {
+        margin-left: 173px;
+        margin-top: 81px;
+    }
+
+    .p_span {
+        margin-left: 123px;
+    }
+
+    .button_ipad_section {
+        margin-left: 242px;
+    }
+
+    .h1_devices_section {
+        margin-right: 193px;
+        margin-top: -47px;
+    }
+
+    .p2_devices_section, .p1_devices_section {
+        margin-right: 123px;
+    }
+
+    .container_for_icon_section {
+        padding-left: 161px;
+    }
+
+    .box_for_footer {
+        padding-left: 194px;
+    }
 }
