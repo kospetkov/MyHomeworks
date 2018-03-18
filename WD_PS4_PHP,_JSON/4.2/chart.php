@@ -2,7 +2,11 @@
 /**
  * @return bool|string
  */
-function chartVisual() {
+function chartVisual()
+{
+  if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+      header('location: index.php');
+  }
   $fileName = 'json/data.json';
   $dataArray = json_decode(file_get_contents($fileName), true);
   $car = $_POST['cars'];

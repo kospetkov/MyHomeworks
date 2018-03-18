@@ -427,9 +427,57 @@ header {
     }
 }
 
+@media screen and (max-width: 930px) {
+    .h1_devices_section {
+        margin-right: 5%;
+    }
+
+    .p1_ipad_section {
+        width: 370px;
+    }
+
+    .p2_ipad_section {
+        width: 340px;
+    }
+
+    .span_ipad_section {
+        height: 125px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .h1_devices_section {
+        margin-top: -70px;
+    }
+
+    .p1_devices_section {
+        margin-top: 0;
+    }
+
+    .button_devices_section {
+        margin-top: 50px;
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .h1_devices_section {
+        margin-right: 0;
+    }
+
+    .button_devices_section {
+        display: none;
+    }
+
+    .button_devices_section1 {
+        display: block;
+        margin-top: 100px;
+    }
+}
+
 @media screen and (max-width: 785px) {
-    .container {
-        width: 785px;
+    .p_span {
+        max-width: 230px;
     }
 
     .p_div {
@@ -449,7 +497,7 @@ header {
     }
 
     .image_header {
-        margin-left: 108px;
+        display: none;
     }
 
     .h4_header {
@@ -465,15 +513,19 @@ header {
     }
 
     .p1_ipad_section {
-        width: 300px;
+        width: 210px;
         font-size: 14px;
         margin-left: 50px;
     }
 
     .p2_ipad_section {
-        width: 300px;
+        width: 290px;
         font-size: 14px;
         margin-left: 5px;
+    }
+
+    .h1_ipad_section {
+        margin-left: 31%;
     }
 
     .button_ipad_section {
@@ -481,13 +533,13 @@ header {
     }
 
     .span_ipad_section {
-        height: 103px;
-        margin-left: 50px;
+    height: 150px;
+    margin-left: 35px;
     }
 
     .h1_devices_section {
-        font-size: 35px;
-        margin-right: 342px;
+        font-size: 30px;
+        margin-right: 38%;
     }
 
     .p2_devices_section, .p1_devices_section {
@@ -502,10 +554,6 @@ header {
 
     .button_devices_section {
         display: none;
-    }
-
-    .button_devices_section1 {
-        display: block;
     }
 
     .container_for_green_section {
@@ -535,11 +583,12 @@ header {
 }
 
 @media screen and (max-width: 650px) {
-    .container {
-        width: 650px;
+    .span_ipad_section {
+        height: 110px;
     }
 
-    .p1_ipad_section {
+    .button_devices_section1 {
+        margin-top: 145px;
     }
 
     .h4_header {
@@ -554,8 +603,8 @@ header {
 
     .h1_ipad_section {
         font-size: 32px;
-        margin-left: 181px;
         padding-top: 16px;
+        margin-left: 28%;
     }
 
     .ipad_section {
@@ -565,10 +614,12 @@ header {
     .p1_ipad_section {
         margin-left: 173px;
         margin-top: 81px;
+        width: 300px;
     }
 
     .p_span {
         margin-left: 123px;
+        max-width: 340px;
     }
 
     .button_ipad_section {
