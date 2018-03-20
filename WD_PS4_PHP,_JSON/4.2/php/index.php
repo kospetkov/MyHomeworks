@@ -6,14 +6,14 @@ include_once 'function.php';
 <head>
     <meta charset="utf-8">
 	<title>WD_PS4_PHP_JSON</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
     <h1 class="caption_for_vote">which car do you prefer?</h1>
     <div class="container">
         <form method="post" action="chart.php">
            <?php
-           array_for_visible ();
+           array_for_visible ($arr);
            ?>
             <input
                 type="submit"

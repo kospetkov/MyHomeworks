@@ -2,24 +2,12 @@
 /**
  * @return bool|string
  */
-function chartVisual()
-{
-  if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-      header('location: index.php');
-  }
-  $fileName = 'json/data.json';
-  $dataArray = json_decode(file_get_contents($fileName), true);
-  $car = $_POST['cars'];
-  $dataArray[$car] ++;
-  file_put_contents($fileName, json_encode($dataArray));
-  echo file_get_contents($fileName, true);
-}
-
+include_once 'chartVisual.php';
 ?>
 
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', {'packages':['corechart']});
@@ -43,5 +31,6 @@ function chartVisual()
 </head>
 <body>
 <div id="piechart" class="piechart"></div>
+</form>
 </body>
 </html>
