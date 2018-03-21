@@ -26,14 +26,11 @@ html, body {
     flex-direction: row;
     justify-content: center;
     color: cornflowerblue;
+    font-size: 50px;
 }
 
 .image_for_form {
     margin: 10px;
-}
-
-.caption_for_vote {
-    font-size: 50px;
 }
 
 .button_for_form {
