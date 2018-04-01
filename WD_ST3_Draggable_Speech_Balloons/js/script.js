@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    var id = 0;
-    var content = $('.content');
+    let id = 0;
+    let content = $('.content');
     $.getJSON('json/data.json', function (data) {
-        for (var i in data) {
+        for (let i in data) {
             let item = data[i];
             let y = item.top;
             let x = item.left;
@@ -17,16 +17,14 @@ $(document).ready(function () {
             let input = $('<input>', {class: 'upper_div_textarea'});
             input.css({display: 'none'});
             elem.append(input);
-            $('.content').append(elem);
+            content.append(elem);
         }
 
         $('.upper_div').draggable({
             containment: 'parent',
             stop: function(event, ui) {
-                let x = ui.position.left;
-                let y = ui.position.top;
                 let idElem = +$(this).attr('id').replace('id_', '');
-                ajaxForUpdate(idElem, y, x);
+                updateCoordinate(idElem, ui);
             },
         });
     });
@@ -35,8 +33,7 @@ $(document).ready(function () {
         if (e.target.className !== 'content') {
             return;
         }
-        let item = $(this);
-        let pos = item.offset();
+        let pos = content.offset();
         let elem_left = pos.left;
         let elem_top = pos.top;
         let x = e.pageX - elem_left;
@@ -52,16 +49,14 @@ $(document).ready(function () {
 
         elem.append(input);
         elem.append(p);
-        item.append(elem);
+        content.append(elem);
         input.focus();
 
-        $(elem).draggable({
+        $('.upper_div').draggable({
             containment: 'parent',
             stop: function(event, ui) {
-                let x = ui.position.left;
-                let y = ui.position.top;
                 let idElem = +elem.attr('id').replace('id_', '');
-                ajaxForUpdate(idElem, y, x);
+                updateCoordinate(idElem, ui);
             },
         });
     });
@@ -84,7 +79,7 @@ $(document).ready(function () {
                     elem.css({display: 'none'});
                     $.ajax({
                         type: 'POST',
-                        url: 'php/deletingInJson.php',
+                        url: 'php/deleting_in_json.php',
                         data: {id: idElem}
                     });
                 }
@@ -95,7 +90,7 @@ $(document).ready(function () {
                     let idElem = +elem.attr('id').replace('id_', '');
                     $.ajax({
                         type: 'POST',
-                        url: 'php/addInJson.php',
+                        url: 'php/add_in_json.php',
                         data: {
                             id: idElem,
                             top: y,
@@ -145,15 +140,17 @@ $(document).ready(function () {
     });
 });
 
-function ajaxForUpdate(id, top, left) {
+function updateCoordinate(id, ui) {
+    let x = ui.position.left;
+    let y = ui.position.top;
     $.ajax({
         type: 'POST',
-        url: 'php/updateCoordInJson.php',
+        url: 'php/update_coord_in_json.php',
         data: {
             id: id,
-            top: top,
-            left: left,
+            top: x,
+            left: y,
             ident: id
         }
     });
-}
+};
