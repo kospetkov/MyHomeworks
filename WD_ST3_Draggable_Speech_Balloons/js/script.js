@@ -8,20 +8,25 @@ $(document).ready(function () {
             let x = item.left;
             let massadg = item.msg;
             id = item.ident;
+            console.log(id);
+
             let elem = $('<div>', {class: 'upper_div'});
             elem.attr({id: 'id_' + i});
             elem.css({top: y, left: x});
+
             let p = $('<p>', {class: 'p_for_text'});
             p.text(massadg);
             elem.append(p);
+
             let input = $('<input>', {class: 'upper_div_textarea'});
             input.css({display: 'none'});
             elem.append(input);
-            content.append(elem);
+            $('.content').append(elem);
         }
 
         $('.upper_div').draggable({
             containment: 'parent',
+            cursor: 'move',
             stop: function(event, ui) {
                 let idElem = +$(this).attr('id').replace('id_', '');
                 updateCoordinate(idElem, ui);
@@ -54,6 +59,7 @@ $(document).ready(function () {
 
         $('.upper_div').draggable({
             containment: 'parent',
+            cursor: 'move',
             stop: function(event, ui) {
                 let idElem = +elem.attr('id').replace('id_', '');
                 updateCoordinate(idElem, ui);
@@ -66,6 +72,7 @@ $(document).ready(function () {
             if (e.keyCode !== 13 && e.keyCode !== 27) {
                 return;
             }
+
             let input = $(document.activeElement);
             let elem = input.parent();
             let y = elem.css('top');
@@ -148,8 +155,8 @@ function updateCoordinate(id, ui) {
         url: 'php/update_coord_in_json.php',
         data: {
             id: id,
-            top: x,
-            left: y,
+            top: y,
+            left: x,
             ident: id
         }
     });
