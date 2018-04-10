@@ -7,11 +7,10 @@ $(document).ready(function () {
             let y = item.top;
             let x = item.left;
             let massadg = item.msg;
-            id = item.ident;
-            console.log(id);
+            id = item.id;
 
             let elem = $('<div>', {class: 'upper_div'});
-            elem.attr({id: 'id_' + i});
+            elem.attr({id: id});
             elem.css({top: y, left: x});
 
             let p = $('<p>', {class: 'p_for_text'});
@@ -61,7 +60,7 @@ $(document).ready(function () {
             containment: 'parent',
             cursor: 'move',
             stop: function(event, ui) {
-                let idElem = +elem.attr('id').replace('id_', '');
+                let idElem = +$(this).attr('id').replace('id_', '');
                 updateCoordinate(idElem, ui);
             },
         });
@@ -102,8 +101,7 @@ $(document).ready(function () {
                             id: idElem,
                             top: y,
                             left: x,
-                            msg: value,
-                            ident: idElem
+                            msg: value
                         }
                     });
                 }
@@ -156,8 +154,7 @@ function updateCoordinate(id, ui) {
         data: {
             id: id,
             top: y,
-            left: x,
-            ident: id
+            left: x
         }
     });
 };

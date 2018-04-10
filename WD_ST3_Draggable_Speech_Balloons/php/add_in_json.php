@@ -1,36 +1,33 @@
 <?php
 $fileName = '../json/data.json';
 $array = json_decode(file_get_contents($fileName), true);
-$ident = $_POST['ident'];
+$id = $_POST['id'];
 $count = count($array);
 if (!$count) {
     $array[] = array(
         'id' => $_POST['id'],
         'top' => (float)$_POST['top'],
         'left' => (float)$_POST['left'],
-        'msg' => $_POST['msg'],
-        'ident' => $_POST['ident']
+        'msg' => $_POST['msg']
     );
 }
 else {
     for ($i = 0; $i <= $count; $i ++) {
-        if (in_array($ident, $array[$i])) {
-            $array[$i] = array(
-                'id' => $_POST['id'],
-                'top' => (float)$_POST['top'],
-                'left' => (float)$_POST['left'],
-                'msg' => $_POST['msg'],
-                'ident' => $_POST['ident']
-            );
+        echo $id;
+        echo $count;
+        if ($id == $array[$i]['id']) {
+            $array[$i]['msg'] = $_POST['msg'];
+            break;
         }
-        else {
+        else if ($i >= $count) {
+            echo "vhod";
             $array[] = array(
                 'id' => $_POST['id'],
                 'top' => (float)$_POST['top'],
                 'left' => (float)$_POST['left'],
-                'msg' => $_POST['msg'],
-                'ident' => $_POST['ident']
+                'msg' => $_POST['msg']
             );
+            break;
         }
     }
 }

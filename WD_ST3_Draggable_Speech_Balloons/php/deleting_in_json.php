@@ -1,11 +1,9 @@
 <?php
 $fileName = '../json/data.json';
 $array = json_decode(file_get_contents($fileName), true);
-//unset($array[$_POST['id']]);
 $id = $_POST['id'];
 $count = count($array);
 for ($i = 0; $i <= $count; $i ++) {
-
     if ($id == $array[$i]['id']) {
         unset($array[$i]);
     }
