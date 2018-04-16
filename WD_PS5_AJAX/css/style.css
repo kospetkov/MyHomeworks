@@ -4,8 +4,19 @@
     margin: 0;
 }
 
+@font-face {
+    font-family: Pacifico;
+    src: url('../fonts/Pacifico/Pacifico.ttf');
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('../fonts/Montserrat/Montserrat-Medium.ttf');
+}
+
 html, body {
     height: 100%;
+    font-family: Montserrat, serif;
 }
 
 .header {
@@ -49,8 +60,8 @@ html, body {
     padding-top: 133px;
     color: #fffecd;
     text-align: center;
-    font-family: Pacifico, Montserrat;
     font-size: 60px;
+    font-family: Pacifico, serif;
 }
 
 .form_content {
@@ -61,13 +72,15 @@ html, body {
 }
 
 .p1_form {
-    padding-right: 162px;
+    padding-right: 136px;
     margin-top: 60px;
+    font-family: Montserrat, serif;
 }
 
 .p2_form {
-    padding-right: 137px;
+    padding-right: 104px;
     margin-top: 50px;
+    font-family: Montserrat, serif;
 }
 
 .input_form {
@@ -78,6 +91,7 @@ html, body {
     font-size: 18px;
     padding-left: 10px;
     color: rgba(0,0,0,0.4);
+    font-family: Montserrat, serif;
 }
 
 .submit_form {
@@ -89,6 +103,7 @@ html, body {
     margin-top: 50px;
     margin-bottom: 250px;
     border: 0 solid #635960;
+    font-family: Montserrat, serif;
 }
 
 .massedg {
@@ -96,6 +111,7 @@ html, body {
     color: mediumspringgreen;
     padding-top: 50px;
     margin-left: 544px;
+    font-family: Montserrat, serif;
 }
 
 .window_for_massedg {
@@ -105,6 +121,7 @@ html, body {
     margin-left: 400px;
     margin-top: 40px;
     overflow-y: scroll;
+    font-family: Montserrat, serif;
 }
 
 .chat_form {
@@ -134,4 +151,5 @@ html, body {
 .p_for_msg {
     color: #635960;
     font-size: 15px;
+    font-family: Montserrat, serif;
 }

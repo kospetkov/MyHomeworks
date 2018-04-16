@@ -1,32 +1,26 @@
 [
     {
-        "id": 0,
-        "user": "koss",
-        "date": 1523825093000,
-        "msg": "hi 01"
-    },
-    {
         "id": 1,
         "user": "koss",
-        "date": 1523825111000,
-        "msg": "hi 02"
+        "date": 1523907075000,
+        "msg": "hi koss"
     },
     {
         "id": 2,
-        "user": "koss",
-        "date": 1523825256000,
-        "msg": "hi 03"
+        "user": "kostya",
+        "date": 1523907170000,
+        "msg": "hi kostya"
     },
     {
         "id": 3,
-        "user": "koss",
-        "date": 1523826087000,
-        "msg": "hi 04"
+        "user": "lesha",
+        "date": 1523909490000,
+        "msg": "hi vse"
     },
     {
         "id": 4,
         "user": "koss",
-        "date": 1523826113000,
-        "msg": "hi 05"
+        "date": 1523909530000,
+        "msg": "hi lesha!!!!"
     }
 ]
