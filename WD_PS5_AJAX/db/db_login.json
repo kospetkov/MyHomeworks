@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "user": "koss",
+        "pass": "0000"
+    },
+    {
+        "id": 1,
+        "user": "koss1",
+        "pass": "0000"
+    },
+    {
+        "id": 2,
+        "user": "koss2",
+        "pass": "1"
+    },
+    {
+        "id": 3,
+        "user": "koss3",
+        "pass": "1"
+    },
+    {
+        "id": 4,
+        "user": "koss5",
+        "pass": "22"
+    },
+    {
+        "id": 5,
+        "user": "k",
+        "pass": "0000"
+    }
+]

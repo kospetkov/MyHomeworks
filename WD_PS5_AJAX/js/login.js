@@ -8,14 +8,21 @@ $(document).ready(function () {
         }
         $.ajax({
             type: 'POST',
-            url: 'login.php',
+            url: 'php/login.php',
             data: {
                 login: userName,
                 pass: password
             },
-            success(ressponce) {
-                $('.massedg').text(ressponce);
-                window.location.href = 'chat.php';
+            success: function (ressponce) {
+                if (ressponce) {
+                    console.log(ressponce);
+                    let res = JSON.parse(ressponce);
+                    if (res.error) {
+                        console.log(res.error);
+                        return;
+                    }
+                }
+                window.location.href = 'php/chat.php';
             }
         });
         return false;

@@ -139,6 +139,8 @@ html, body {
     display: block;
     background-color: #fffecd;
     border: 0 solid #fffecd;
+    font-family: Montserrat, serif;
+    font-size: 15px;
 }
 
 .chat_submit {

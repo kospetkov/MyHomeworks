@@ -3,8 +3,7 @@
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('location: index.php');
 }
-session_start();
-$path_to_db = 'db_message.json';
+$path_to_db = '../db/db_message.json';
 $data_array = json_decode(file_get_contents($path_to_db), true);
 $count = count($data_array);
 $date_time = (time() * 1000) - 3600000;

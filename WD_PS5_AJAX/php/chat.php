@@ -10,8 +10,8 @@ if (!isset($_SESSION['login'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>WD_PS5_AJAX</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
 <header class="header">
@@ -35,7 +35,7 @@ if (!isset($_SESSION['login'])) {
         <input type="submit" class="chat_submit" value="SEND">
     </form>
 </section>
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/chat.js"></script>
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/chat.js"></script>
 </body>
 </html>
