@@ -36,7 +36,10 @@ else {
                 break;
             }
             else {
-                header('location: index.php');
+                $res['status'] = '';
+                $res['password'] = 'incorrect password';
+                echo json_encode($res);
+                return;
             }
         }
         else if (($i + 1) === $count) {

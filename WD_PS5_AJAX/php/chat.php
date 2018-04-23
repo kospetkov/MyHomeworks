@@ -28,7 +28,7 @@ if (!isset($_SESSION['login'])) {
 </header>
 <section class="content">
     <h1>Easy Chat</h1>
-    <p class="massedg" id="login"><?='hi!  ' . $_SESSION['login'] ?></p>
+    <p class="hi_massedg" id="login"><?='hi!  ' . $_SESSION['login'] ?></p>
     <div class="window_for_massedg"></div>
     <form id="form_chat" class="chat_form">
         <input type="text" class="textarea">

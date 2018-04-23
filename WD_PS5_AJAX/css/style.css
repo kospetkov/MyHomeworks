@@ -107,14 +107,23 @@ html, body {
 }
 
 .massedg {
-    font-size: 35px;
-    color: mediumspringgreen;
+    font-size: 28px;
+    color: red;
     padding-top: 50px;
-    margin-left: 544px;
+    font-family: Montserrat, serif;
+    display: none;
+}
+
+.hi_massedg {
+    font-size: 28px;
+    padding-top: 50px;
+    margin-left: 623px;
     font-family: Montserrat, serif;
 }
 
 .window_for_massedg {
+    display: flex;
+    flex-direction: column;
     background-color: #fffecd;
     width: 550px;
     height: 350px;
@@ -151,7 +160,9 @@ html, body {
 }
 
 .p_for_msg {
+    display: flex;
+    flex-direction: row;
     color: #635960;
-    font-size: 15px;
+    font-size: 20px;
     font-family: Montserrat, serif;
 }

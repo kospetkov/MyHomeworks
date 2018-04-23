@@ -6,7 +6,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 function validation($path_to_db) {
     $result = [
         'status' => 'ok',
-        'error' => ''
+        'error' => '',
+        'password' => ''
     ];
     if (!file_exists($path_to_db)) {
         $file = file_put_contents($path_to_db, '[]');

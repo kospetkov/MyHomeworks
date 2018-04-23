@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const TIME = 1000;
+    const TIME = 100000;
     let first = 0;
     let last = 0;
     let window = $('.window_for_massedg');
@@ -60,14 +60,71 @@ $(document).ready(function () {
     }
 
     function newMsg(item) {
-        let p = $('<p>', {class: 'p_for_msg'});
+        let p = $('<div>', {class: 'p_for_msg'});
         p.attr({id: item.id});
         let time = new Date(+item.date);
-        console.log(time.toLocaleTimeString('en-GB'));
         let format = time.toLocaleTimeString('en-GB');
-        let pText = '     [ ' + format + ' ]  ' + item.user + ':     ' + item.msg;
-        console.log(pText);
-        p.text(pText);
+        let pText = '     [ ' + format + ' ]  ' + item.user + '   :';
+        //console.log(pText);
+        p.append(pText);
+        //let smile = $('<img src="../img/smile.gif">', {class: 'smile', alt: 'smile'});
+        let userMsg = addSmile(p, item.msg);
+        p.append(userMsg);
+        //console.log(p);
         window.append(p);
+    }
+
+    function addSmile(divForMsg, string) {
+        if (string) {
+            if (isSmile(string)) {
+                let smile = $('<img src="../img/smile.gif">', {alt: 'smile'});
+                console.log('smile');
+                replaceImg(divForMsg, string, smile);
+            }
+            else if (isSad(string)) {
+                let sad = $('<img src="../img/sad.gif">', {alt: 'sad'});
+                console.log('sad');
+                replaceImg(divForMsg, string, sad);
+            }
+        }
+    }
+
+    function replaceImg(item, string, image) {
+        let index = string.indexOf(':)');
+        let end = index + 2;
+        let str = string.substring(0, index);
+        console.log(str);
+        let strEnd = string.substring(end);
+        console.log(strEnd);
+        let span = $('<span>');
+        span.append(str);
+        item.append(span);
+        let divForSmile = $('<div>');
+        divForSmile.append(image);
+        item.append(divForSmile);
+        console.log('spanchick');
+        console.log(span);
+        if (isSmile(strEnd)) {
+            console.log('конец строки');
+            addSmile(item, strEnd);
+        }
+        else {
+            let span2 = $('<span>');
+            span2.append(strEnd);
+            item.append(span2);
+        }
+    }
+
+    function isSmile(string) {
+        if (string.indexOf(':)') >= 0) {
+            return true;
+        }
+        return false;
+    }
+    function isSad(string) {
+        if (string.indexOf(':(') >= 0) {
+            return true;
+        }
+        return false;
     }
 });
