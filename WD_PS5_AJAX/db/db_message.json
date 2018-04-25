@@ -1,170 +1,58 @@
 [
     {
         "id": 1,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524502428000,
-        "msg": "gg"
+        "idUser": 2,
+        "user": "st",
+        "date": 1524673095000,
+        "msg": "рш"
     },
     {
         "id": 2,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524502432000,
-        "msg": "eth"
-    },
-    {
-        "id": 3,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524502441000,
-        "msg": "hjukij"
+        "idUser": 2,
+        "user": "st",
+        "date": 1524673111000,
+        "msg": "hi :):(:)))):("
     },
     {
         "id": 4,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524502451000,
-        "msg": "hi"
+        "idUser": 1,
+        "user": "koss",
+        "date": 1524675972000,
+        "msg": "hi:)))))"
     },
     {
         "id": 5,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524502548000,
-        "msg": "ggg"
+        "idUser": 1,
+        "user": "koss",
+        "date": 1524676024000,
+        "msg": "       kkk   :)"
     },
     {
         "id": 6,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524502671000,
-        "msg": "5555"
+        "idUser": 1,
+        "user": "koss",
+        "date": 1524676970000,
+        "msg": "hi you :)"
     },
     {
         "id": 7,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524502853000,
-        "msg": "ilkuiuo"
+        "idUser": 3,
+        "user": "res",
+        "date": 1524677023000,
+        "msg": ":) hi !!!!:)"
     },
     {
         "id": 8,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524504766000,
-        "msg": "igyhg"
+        "idUser": 3,
+        "user": "res",
+        "date": 1524677045000,
+        "msg": ":("
     },
     {
         "id": 9,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524504917000,
-        "msg": "zcvxnh"
-    },
-    {
-        "id": 10,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524505715000,
-        "msg": "hi :) nn"
-    },
-    {
-        "id": 11,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524515958000,
-        "msg": "hi :) koss"
-    },
-    {
-        "id": 12,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524515990000,
-        "msg": "hi :) gorg, hi :) ford"
-    },
-    {
-        "id": 13,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524516595000,
-        "msg": "1 :), 2 :), 3 :), 4 :), 5 :):"
-    },
-    {
-        "id": 14,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524517160000,
-        "msg": "hi koss :)"
-    },
-    {
-        "id": 15,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524517179000,
-        "msg": "hi           :) dodo"
-    },
-    {
-        "id": 16,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524518364000,
-        "msg": "hi :), not hi :("
-    },
-    {
-        "id": 17,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524518643000,
-        "msg": "not hi :("
-    },
-    {
-        "id": 18,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524518988000,
+        "idUser": 3,
+        "user": "res",
+        "date": 1524677051000,
         "msg": ":)"
-    },
-    {
-        "id": 19,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524518994000,
-        "msg": ":("
-    },
-    {
-        "id": 20,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524519034000,
-        "msg": ":("
-    },
-    {
-        "id": 21,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524519205000,
-        "msg": "not :("
-    },
-    {
-        "id": 22,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524519223000,
-        "msg": "not :)"
-    },
-    {
-        "id": 23,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524519299000,
-        "msg": "h :("
-    },
-    {
-        "id": 24,
-        "idUser": 0,
-        "user": "k",
-        "date": 1524519391000,
-        "msg": "hh:),,, :("
     }
 ]
