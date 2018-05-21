@@ -28,8 +28,8 @@ if (!isset($_SESSION['login'])) {
 </header>
 <section class="content">
     <h1>Easy Chat</h1>
-    <p class="hi_massedg" id="login"><?='hi!  ' . $_SESSION['login'] ?></p>
-    <div class="window_for_massedg"></div>
+    <p class="hi_message" id="login"><?='hi!  ' . $_SESSION['login'] ?></p>
+    <div class="window_for_message"></div>
     <form id="form_chat" class="chat_form">
         <input type="text" class="textarea">
         <input type="submit" class="chat_submit" value="SEND">

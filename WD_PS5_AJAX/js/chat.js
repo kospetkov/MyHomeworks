@@ -2,7 +2,7 @@ $(document).ready(function () {
     const TIME = 1000;
     let first = 0;
     let last = 0;
-    let window = $('.window_for_massedg');
+    let windowForMessage = $('.window_for_message');
     updateMsg();
     setTimeout(function update() {
         updateMsg();
@@ -46,7 +46,7 @@ $(document).ready(function () {
                     if ((first < idFirst) || (last < idLast)) {
                         first = idFirst;
                         last = idLast;
-                        window.empty();
+                        windowForMessage.empty();
                         for (let i = 0; i < resLength; i++) {
                             let item = res[i];
                             newMsg(item);
@@ -66,14 +66,15 @@ $(document).ready(function () {
         divForMsg.append(text);
         let userMsg = addSmile(divForMsg, item.msg);
         divForMsg.append(userMsg);
-        window.append(divForMsg);
+        windowForMessage.append(divForMsg);
+        windowForMessage.scrollTop(windowForMessage.prop('scrollHeight'));
     }
 
     function addSmile(divForMsg, string) {
         if (string) {
             let index = 0;
             let smile;
-            if (isSmile(string) || isSad(string)) {
+            if (isSmile(string)) {
                 index = string.indexOf(':');
                 if (string.charAt(index + 1) === ')') {
                     smile = $('<img src="../img/smile.gif">', {alt: 'smile'});
@@ -93,7 +94,7 @@ $(document).ready(function () {
                 let divForSmile = $('<div>');
                 divForSmile.append(smile);
                 divForMsg.append(divForSmile);
-                if (isSmile(strEnd) || isSad(strEnd)) {
+                if (isSmile(strEnd)) {
                     addSmile(divForMsg, strEnd);
                 }
                 else {
@@ -104,21 +105,14 @@ $(document).ready(function () {
             }
             else {
                 let span = $('<span>', {class: 'span_for_text'});
-                span.append(string)
+                span.append(string);
                 divForMsg.append(span);
             }
         }
     }
 
     function isSmile(string) {
-        if (string.indexOf(':)') >= 0) {
-            return true;
-        }
-        return false;
-    }
-
-    function isSad(string) {
-        if (string.indexOf(':(') >= 0) {
+        if ((string.indexOf(':)') >= 0) || (string.indexOf(':(') >= 0)) {
             return true;
         }
         return false;

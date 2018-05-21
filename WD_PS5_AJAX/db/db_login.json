@@ -18,5 +18,40 @@
         "id": 3,
         "user": "res",
         "pass": "7"
+    },
+    {
+        "id": 4,
+        "user": "koss55",
+        "pass": "kjl"
+    },
+    {
+        "id": 5,
+        "user": "koss0000",
+        "pass": "2222"
+    },
+    {
+        "id": 6,
+        "user": "koss00000",
+        "pass": "343475869"
+    },
+    {
+        "id": 7,
+        "user": "<script>alert('banana')<\/script>'",
+        "pass": "111"
+    },
+    {
+        "id": 8,
+        "user": "alert('banana')'",
+        "pass": "111"
+    },
+    {
+        "id": 9,
+        "user": "&lt;script&gt;alert('banana')&lt;\/script&gt;'",
+        "pass": "111"
+    },
+    {
+        "id": 10,
+        "user": "&lt;script&gt;alert('hren tebe hacker')&lt;\/script&gt;'",
+        "pass": "111"
     }
 ]

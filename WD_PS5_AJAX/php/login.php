@@ -7,7 +7,7 @@ if ($res['error']) {
     return;
 }
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('location: index.php');
+    header('location: index.html');
 }
 if (isset($_SESSION)) {
     session_destroy();
@@ -20,6 +20,9 @@ if (isset($_POST['login'])) {
     $login = $_POST['login'];
     $pass = $_POST['pass'];
 }
+
+$login = htmlspecialchars($login);
+$pass = htmlspecialchars($pass);
 if (!$count) {
     $dataArray[] = [
         'id' => $id,
@@ -54,3 +57,12 @@ else {
     }
 }
 file_put_contents($path_to_db, json_encode($dataArray, JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
+
+function clean($value = "") {
+    $value = trim($value);
+    $value = stripslashes($value);
+    $value = strip_tags($value);
+    $value = htmlspecialchars($value);
+
+    return $value;
+}

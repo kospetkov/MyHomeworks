@@ -3,7 +3,8 @@ $(document).ready(function () {
         let userName = $('#userName').val();
         let password = $('#password').val();
         if (!userName || !password) {
-            $('.massedg').text('login and password fields must be filled in');
+            let message = 'login and password fields must be filled in';
+            errorMessage(message);
             return false;
         }
         $.ajax({
@@ -15,18 +16,14 @@ $(document).ready(function () {
             },
             success: function (ressponce) {
                 if (ressponce) {
-                    console.log(ressponce);
                     let res = JSON.parse(ressponce);
                     if (res.error) {
                         console.log(res.error);
                         return;
                     }
                     else if (res.password) {
-                        let p = $('.massedg');
-                        p.css({display: 'block'});
-                        p.text('incorrect password');
-                        $('.p2_form').css({display: 'none'});
-                        $('#password').css({border: '5px solid red'});
+                        let message = 'incorrect password';
+                        errorMessage(message);
                         return;
                     }
                 }
@@ -35,4 +32,12 @@ $(document).ready(function () {
         });
         return false;
     });
+
+    function errorMessage(message) {
+        let p = $('.message');
+        p.css({display: 'block'});
+        p.text(message);
+        $('.p2_form').css({display: 'none'});
+        $('#password').css({border: '5px solid red'});
+    }
 });

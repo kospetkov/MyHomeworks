@@ -1,8 +1,6 @@
 <?php 
 error_reporting(E_ERROR | E_PARSE);
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('location: index.html');
-}
+
 function validation($path_to_db) {
     $result = [
         'status' => 'ok',
