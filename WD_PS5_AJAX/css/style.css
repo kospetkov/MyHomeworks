@@ -124,8 +124,11 @@ html, body {
 }
 
 .window_for_message {
-    display: flex;
-    flex-direction: column;
+    //display: flex;
+    //flex-direction: column;
+    display: block;
+    //overflow-wrap: normal;
+    overflow: hidden;
     background-color: #fffecd;
     width: 550px;
     height: 350px;
@@ -161,9 +164,7 @@ html, body {
 .div_for_msg {
     display: flex;
     flex-direction: row;
-    align-content: flex-start;
     min-height: 20px;
-    max-height: 20px;
     margin: 2px;
     color: #635960;
     font-size: 20px;
@@ -172,6 +173,13 @@ html, body {
 
 .span_for_text {
     margin-left: 5px;
+    display: block;
+    word-wrap: break-word;
+    max-width: 340px;
+}
+
+.span_for_text_1 {
+    width: 185px;
 }
 
 .wrapper_for_div {

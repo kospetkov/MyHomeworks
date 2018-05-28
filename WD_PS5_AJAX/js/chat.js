@@ -12,6 +12,7 @@ $(document).ready(function () {
     $('#form_chat').submit(function () {
         let textarea = $('.textarea');
         let msg = textarea.val();
+        //msg = msg.replace(/</g, "&lt;").replace(/>/g, "&gt;");
         if (msg) {
             $.ajax({
                 type: 'POST',
@@ -58,12 +59,13 @@ $(document).ready(function () {
     }
 
     function newMsg(item) {
+        //item = item.replace(/</g, "&lt;").replace(/>/g, "&gt;");
         let divForMsg = $('<div>', {class: 'div_for_msg'});
         divForMsg.attr({id: item.id});
         let time = new Date(+item.date);
         let format = time.toLocaleTimeString('en-GB');
         let text = '     [ ' + format + ' ]  ' + item.user + '   :';
-        divForMsg.append(text);
+        divForMsg.append($('<div>', {class: 'span_for_text1'}).append(text));
         let userMsg = addSmile(divForMsg, item.msg);
         divForMsg.append(userMsg);
         windowForMessage.append(divForMsg);
@@ -88,8 +90,8 @@ $(document).ready(function () {
                 let end = index + 2;
                 let str = string.substring(0, index);
                 let strEnd = string.substring(end);
-                let span = $('<span>', {class: 'span_for_text'});
-                span.append(str);
+                let span = $('<div>', {class: 'span_for_text'});
+                span.text(str);
                 divForMsg.append(span);
                 let divForSmile = $('<div>');
                 divForSmile.append(smile);
@@ -98,13 +100,13 @@ $(document).ready(function () {
                     addSmile(divForMsg, strEnd);
                 }
                 else {
-                    let spanEnd = $('<span>', {class: 'span_for_text'});
+                    let spanEnd = $('<div>', {class: 'span_for_text'});
                     spanEnd.append(strEnd);
                     divForMsg.append(spanEnd);
                 }
             }
             else {
-                let span = $('<span>', {class: 'span_for_text'});
+                let span = $('<div>', {class: 'span_for_text'});
                 span.append(string);
                 divForMsg.append(span);
             }

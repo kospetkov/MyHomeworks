@@ -9,7 +9,7 @@ $(document).ready(function () {
         }
         $.ajax({
             type: 'POST',
-            url: 'php/login.php',
+            url: '../php/login.php',
             data: {
                 login: userName,
                 pass: password
@@ -27,7 +27,7 @@ $(document).ready(function () {
                         return;
                     }
                 }
-                window.location.href = 'php/chat.php';
+                window.location.href = '../php/chat.php';
             }
         });
         return false;
