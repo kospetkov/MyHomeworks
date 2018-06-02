@@ -20,19 +20,19 @@ $(document).ready(function () {
                     return;
                 }
 
-                else if (res[0]['new_linck']) {
-                    let status = res[0]['new_linck'];
-                    let ip = res[0]['ip'];
-                    console.log(status);
-                    console.log(ip);
-                    textarea.val(status);
-                }
-
                 else if (res[0]['linck']) {
                     let linck = res[0]['linck'];
                     console.log(linck);
                     textarea.val('');
                     window.location.href = linck;
+                }
+
+                else if (res[0]['new_linck']) {
+                    let status = res[0]['new_linck'];
+                    let ip = res[0]['id'];
+                    console.log(status);
+                    console.log(ip);
+                    textarea.val(status);
                 }
             }
         });

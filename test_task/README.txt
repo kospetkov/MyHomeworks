@@ -28,3 +28,4 @@ create table
 -ip_user => varchar(15), utf8_general_ci
 -time => timestamp, CURRENT_TIMESTAMP, ON APDATE CURRENT_TIMESTAMP
 -time_create => datetime, CURRENT_TIMESTAMP
+-----------------------------------------------------

@@ -23,11 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $data_array[] = [
-                        'new_linck' => $row['new_linck'],
-                        'ip' => 'select',
-                        'linck' => ''
-                    ];
+                    $data_array[] = create_data_array($row['new_linck'], 'select', '');
                 }
                 echo json_encode($data_array);
             }
@@ -48,9 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                            $data_array[] = [
-                                'id' => $row['id']
-                            ];
+                            $data_array[] = create_data_array('', $row['id'], '');
                         }
                         $id = $data_array[0]['id'];
                         $create_time = limit_time(0);
@@ -61,12 +55,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         }
 
                         else {
-                            $data_linck[] = [
-                                'new_linck' => $new_linck,
-                                'ip' => 'update',
-                                'linck' => ''
-                            ];
-                            echo json_encode($data_linck);
+                            $data_array[] = create_data_array($new_linck, 'update', '');
+                            echo json_encode($data_array);
                         }
                     }
 
@@ -79,22 +69,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         }
 
                         else {
-                            $data_array[] = [
-                                'new_linck' => $new_linck,
-                                'ip' => 'insert',
-                                'linck' => ''
-                            ];
+                            $data_array[] = create_data_array($new_linck, 'insert', '');
                             echo json_encode($data_array);
                         }
                     }
                 }
 
                 else {
-                    $data_array[] = [
-                        'new_linck' => 'limit create linck',
-                        'ip' => $ip,
-                        'linck' => ''
-                    ];
+                    $data_array[] = create_data_array('limit create linck', $ip, '');
                     echo json_encode($data_array);
                 }
             }
@@ -105,14 +87,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $result = mysqli_query($connect, $sql);
             if (mysqli_num_rows($result) > 0) {
                 $row = mysqli_fetch_assoc($result);
-                $data_array[] = [
-                    'id' => $row['id'],
-                    'linck' => $row['linck'],
-                    'new_linck' => '',
-                    'using_linck' => $row['using_linck']
-                ];
-                $using_linck = $data_array[0]['using_linck'] + 1;
+                $data_array[] = create_data_array($row['using_linck'], $row['id'], $row['linck']);
+                $using_linck = $data_array[0]['new_linck'] + 1;
                 $id_linck = $data_array[0]['id'];
+
                 echo json_encode($data_array);
 
                 $sql = "UPDATE `linck_tabl` SET `using_linck`=$using_linck WHERE id=$id_linck";
@@ -121,9 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     error_message($res, mysqli_error($connect));
                 }
             }
-
         }
-
     }
 }
 
@@ -150,4 +126,13 @@ function limit_time($limit) {
    $timer = time() - $limit;
    $date_limit = date("Y-m-d H:i:s", $timer);
    return $date_limit;
+}
+
+function create_data_array($new_linck, $id, $linck) {
+    $data_array = [
+        'new_linck' => $new_linck,
+        'id' => $id,
+        'linck' => $linck
+    ];
+    return $data_array;
 }
