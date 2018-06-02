@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "idUser": 2,
+        "user": "st",
+        "date": 1524673095000,
+        "msg": "рш"
+    },
+    {
+        "id": 2,
+        "idUser": 2,
+        "user": "st",
+        "date": 1524673111000,
+        "msg": "hi :):(:)))):("
+    },
+    {
+        "id": 4,
+        "idUser": 1,
+        "user": "koss",
+        "date": 1524675972000,
+        "msg": "hi:)))))"
+    },
+    {
+        "id": 5,
+        "idUser": 1,
+        "user": "koss",
+        "date": 1524676024000,
+        "msg": "       kkk   :)"
+    },
+    {
+        "id": 6,
+        "idUser": 1,
+        "user": "koss",
+        "date": 1524676970000,
+        "msg": "hi you :)"
+    },
+    {
+        "id": 7,
+        "idUser": 3,
+        "user": "res",
+        "date": 1524677023000,
+        "msg": ":) hi !!!!:)"
+    },
+    {
+        "id": 8,
+        "idUser": 3,
+        "user": "res",
+        "date": 1524677045000,
+        "msg": ":("
+    },
+    {
+        "id": 9,
+        "idUser": 3,
+        "user": "res",
+        "date": 1524677051000,
+        "msg": ":)"
+    }
+]

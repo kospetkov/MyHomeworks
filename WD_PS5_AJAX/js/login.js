@@ -17,17 +17,17 @@ $(document).ready(function () {
             success: function (ressponce) {
                 if (ressponce) {
                     let res = JSON.parse(ressponce);
-                    if (res.error) {
-                        console.log(res.error);
+                    //if (res.error) {
+                        console.log(res);
                         return;
-                    }
-                    else if (res.password) {
-                        let message = 'incorrect password';
-                        errorMessage(message);
-                        return;
-                    }
+                    //}
+                    //else if (res.password) {
+                   //     let message = 'incorrect password';
+                     //   errorMessage(message);
+                    //    return;
+                  //  }
                 }
-                window.location.href = '../php/chat.php';
+                //window.location.href = '../php/chat.php';
             }
         });
         return false;

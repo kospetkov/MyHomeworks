@@ -1,5 +1,5 @@
 <?php
-/*require_once 'validation.php';
+require_once 'validation.php';
 $path_to_db = '../db/db_login.json';
 $res = validation($path_to_db);
 if ($res['error']) {
@@ -7,7 +7,7 @@ if ($res['error']) {
     return;
 }
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('location: index.html');
+    header('location: index.php');
 }
 if (isset($_SESSION)) {
     session_destroy();
@@ -20,9 +20,6 @@ if (isset($_POST['login'])) {
     $login = $_POST['login'];
     $pass = $_POST['pass'];
 }
-
-$login = htmlspecialchars($login);
-$pass = htmlspecialchars($pass);
 if (!$count) {
     $dataArray[] = [
         'id' => $id,

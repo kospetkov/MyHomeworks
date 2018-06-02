@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['login'])) {
+    header('location: index.html');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,19 +28,14 @@
 </header>
 <section class="content">
     <h1>Easy Chat</h1>
-    <form class="form_content" id="form">
-
-        <input type="text" id="userName" class="input_form" value="">
-
-
-        <input type="submit" class="submit_form" value="Submit">
-        <div class="wrapper_for_div">
-            <div class="shadow">
-            </div>
-        </div>
+    <p class="hi_message" id="login"><?='hi!  ' . $_SESSION['login'] ?></p>
+    <div class="window_for_message"></div>
+    <form id="form_chat" class="chat_form">
+        <input type="text" class="textarea">
+        <input type="submit" class="chat_submit" value="SEND">
     </form>
 </section>
 <script src="../js/jquery-3.2.1.min.js"></script>
-<script src="../js/login.js"></script>
+<script src="../js/chat.js"></script>
 </body>
 </html>
