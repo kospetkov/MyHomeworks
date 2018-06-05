@@ -124,10 +124,7 @@ html, body {
 }
 
 .window_for_message {
-    //display: flex;
-    //flex-direction: column;
     display: block;
-    //overflow-wrap: normal;
     overflow: hidden;
     background-color: #fffecd;
     width: 550px;
@@ -161,25 +158,12 @@ html, body {
     border: 0 solid #635960;
 }
 
-.div_for_msg {
-    display: flex;
-    flex-direction: row;
-    min-height: 20px;
+.p_for_msg {
+    word-wrap: break-word;
     margin: 2px;
     color: #635960;
     font-size: 20px;
     font-family: Montserrat, serif;
-}
-
-.span_for_text {
-    margin-left: 5px;
-    display: block;
-    word-wrap: break-word;
-    max-width: 340px;
-}
-
-.span_for_text_1 {
-    width: 185px;
 }
 
 .wrapper_for_div {
@@ -198,4 +182,8 @@ html, body {
     width: 253px;
     transform: rotate(340deg);
     background: linear-gradient(rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0));
+}
+
+ins {
+    color: chocolate;
 }

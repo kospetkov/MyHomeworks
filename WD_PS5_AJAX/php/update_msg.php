@@ -15,7 +15,7 @@ if ($count) {
                 'id' => $data_array[$i]['id'],
                 'user' => $data_array[$i]['user'],
                 'date' => $data_array[$i]['date'],
-                'msg' => htmlspecialchars($data_array[$i]['msg'])
+                'msg' => $data_array[$i]['msg']
             ];
         }
     }

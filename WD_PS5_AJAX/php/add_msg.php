@@ -17,13 +17,9 @@ session_start();
 $data_array = json_decode(file_get_contents($path_to_db), true);
 $id = count($data_array);
 $message = $_POST['msg'];
-//$message = stripcslashes($message);
-//$message = htmlspecialchars($message);
-//$message = $message.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-//$message = $_POST['msg'];
-//$message = htmlspecialchars_decode($message);
-$message = preg_replace('/</g', '&lt', $message);
-$message = preg_replace('/>/g', '&gt', $message);
+$message = htmlspecialchars($message);
+$message = str_replace(':)', '<img src="../img/smile.gif" alt="smile">', $message);
+$message = str_replace(':(', '<img src="../img/sad.gif" alt="smile">', $message);
 if (isset($_POST['msg'])) {
     $new_array = [
         'id' => $id,

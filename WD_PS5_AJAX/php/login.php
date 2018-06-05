@@ -1,5 +1,5 @@
 <?php
-/*require_once 'validation.php';
+require_once 'validation.php';
 $path_to_db = '../db/db_login.json';
 $res = validation($path_to_db);
 if ($res['error']) {

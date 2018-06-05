@@ -68,5 +68,25 @@
         "id": 13,
         "user": "kkkkkkk",
         "pass": "1"
+    },
+    {
+        "id": 14,
+        "user": "sbk;nm'oy;mk x ,'gkjpdr;.",
+        "pass": "111"
+    },
+    {
+        "id": 15,
+        "user": "sbk;nm'oy;mk x ,'gkjpdr;.vsz?EG;k",
+        "pass": "1"
+    },
+    {
+        "id": 16,
+        "user": "&lt;script&gt;alert('fugo')&lt;\/script&gt;",
+        "pass": "111"
+    },
+    {
+        "id": 17,
+        "user": "tropick",
+        "pass": "123"
     }
 ]
