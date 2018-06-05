@@ -11,8 +11,4 @@ if (!$connect) {
     $res['error'] = mysqli_connect_error();
     $res['status'] = '';
     echo json_encode($res);
-}/* else {
-    $res['status'] = 'connect';
-    echo json_encode($res);
-}*/
-
+}

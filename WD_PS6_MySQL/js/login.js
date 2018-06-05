@@ -3,43 +3,43 @@ $(document).ready(function () {
         let userName = $('#userName').val();
         let password = $('#password').val();
         if (!userName || !password) {
-            //$('.massedg').text('login and password fields must be filled in');
-            let p = $('.message');
-            p.css({display: 'block'});
-            p.text('login and password fields must be filled in');
-            $('.p2_form').css({display: 'none'});
-            $('#password').css({border: '5px solid red'});
+            let message = 'login and password fields must be filled in';
+            errorMessage(message);
             return false;
         }
         $.ajax({
             type: 'POST',
-            url: 'sql_php/login.php',
+            url: '../sql_php/login.php',
             data: {
                 login: userName,
                 pass: password
             },
             success: function (ressponce) {
                 if (ressponce) {
-                    console.log(ressponce);
                     let res = JSON.parse(ressponce);
-                    console.log('do window');
+
                     if (res.error) {
-                        console.log(res.error);
+                        console.log(res);
                         return;
                     }
                     else if (res.password) {
-                        let p = $('.message');
-                        p.css({display: 'block'});
-                        p.text('incorrect password');
-                        $('.p2_form').css({display: 'none'});
-                        $('#password').css({border: '5px solid red'});
+                        console.log(res.password);
+                        let message = 'incorrect password';
+                        errorMessage(message);
                         return;
                     }
                 }
-                console.log('window');
-                window.location.href = 'php/chat.php';
+                window.location.href = '../sql_php/chat.php';
             }
         });
         return false;
     });
+
+    function errorMessage(message) {
+        let p = $('.message');
+        p.css({display: 'block'});
+        p.text(message);
+        $('.p2_form').css({display: 'none'});
+        $('#password').css({border: '5px solid red'});
+    }
 });

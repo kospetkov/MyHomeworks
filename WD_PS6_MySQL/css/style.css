@@ -124,8 +124,8 @@ html, body {
 }
 
 .window_for_message {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    overflow: hidden;
     background-color: #fffecd;
     width: 550px;
     height: 350px;
@@ -139,7 +139,6 @@ html, body {
     justify-content: space-between;
     width: 550px;
     margin-top: 25px;
-    padding-bottom: 215px;
 }
 
 .textarea {
@@ -159,20 +158,12 @@ html, body {
     border: 0 solid #635960;
 }
 
-.div_for_msg {
-    display: flex;
-    flex-direction: row;
-    align-content: flex-start;
-    min-height: 20px;
-    max-height: 20px;
+.p_for_msg {
+    word-wrap: break-word;
     margin: 2px;
     color: #635960;
-    font-size: 20px;
+    font-size: 15px;
     font-family: Montserrat, serif;
-}
-
-.span_for_text {
-    margin-left: 5px;
 }
 
 .wrapper_for_div {
@@ -191,4 +182,8 @@ html, body {
     width: 253px;
     transform: rotate(340deg);
     background: linear-gradient(rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0));
+}
+
+ins {
+    color: chocolate;
 }
