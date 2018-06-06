@@ -13,7 +13,7 @@ $(document).ready(function () {
         if (msg) {
             $.ajax({
                 type: 'POST',
-                url: '../oop_php/add_msg.php',
+                url: '../php/add_msg.php',
                 data: {
                     msg: msg
                 },
@@ -25,6 +25,7 @@ $(document).ready(function () {
                         return;
                     }
                     newMsg(res[0]);
+                    windowForMessage.scrollTop(windowForMessage.prop('scrollHeight'));
                 }
             });
             textarea.val('');
@@ -35,7 +36,7 @@ $(document).ready(function () {
     function updateMsg() {
         $.ajax({
             type: 'POST',
-            url: '../oop_php/update_msg.php',
+            url: '../php/update_msg.php',
             success(ressponce) {
                 if (ressponce) {
                     let res = JSON.parse(ressponce);
@@ -58,6 +59,5 @@ $(document).ready(function () {
         let text = '<ins>[ ' + format + ' ]  ' + item.user + ' :</ins> ' + itemMsg;
         PForMsg.append(text);
         windowForMessage.append(PForMsg);
-        windowForMessage.scrollTop(windowForMessage.prop('scrollHeight'));
     }
 });

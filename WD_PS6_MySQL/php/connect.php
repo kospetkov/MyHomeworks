@@ -10,12 +10,3 @@ $connect = new mysqli($config['server_name'], $config['user_name'], $config['pas
 if ($connect -> connect_error) {
     echo "Failed to connect to MySQL: (" . $connect -> connect_errno . ") " . $connect -> connect_error ;
 }
-
-
-/*
-if (!$connect) {
-    $res['error'] = mysqli_connect_error();
-    $res['status'] = '';
-    echo json_encode($res);
-}
-*/

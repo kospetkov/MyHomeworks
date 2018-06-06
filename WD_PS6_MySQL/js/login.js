@@ -9,12 +9,14 @@ $(document).ready(function () {
         }
         $.ajax({
             type: 'POST',
-            url: '../oop_php/login.php',
+            url: '../php/login.php',
             data: {
                 login: userName,
                 pass: password
             },
             success: function (ressponce) {
+                console.log(ressponce);
+
                 if (ressponce) {
                     let res = JSON.parse(ressponce);
                     console.log(res);
@@ -29,8 +31,10 @@ $(document).ready(function () {
                         errorMessage(message);
                         return;
                     }
+                    else if (res.status) {
+                        window.location.href = '../php/chat.php';
+                    }
                 }
-                window.location.href = '../sql_php/chat.php';
             }
         });
         return false;
