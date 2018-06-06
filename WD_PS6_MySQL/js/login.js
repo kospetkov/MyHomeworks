@@ -9,7 +9,7 @@ $(document).ready(function () {
         }
         $.ajax({
             type: 'POST',
-            url: '../sql_php/login.php',
+            url: '../oop_php/login.php',
             data: {
                 login: userName,
                 pass: password
@@ -17,6 +17,7 @@ $(document).ready(function () {
             success: function (ressponce) {
                 if (ressponce) {
                     let res = JSON.parse(ressponce);
+                    console.log(res);
 
                     if (res.error) {
                         console.log(res);

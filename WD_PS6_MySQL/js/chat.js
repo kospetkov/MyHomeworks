@@ -1,7 +1,5 @@
 $(document).ready(function () {
     const TIME = 1000;
-    let first = 0;
-    let last = 0;
     let windowForMessage = $('.window_for_message');
     updateMsg();
     setTimeout(function update() {
@@ -15,7 +13,7 @@ $(document).ready(function () {
         if (msg) {
             $.ajax({
                 type: 'POST',
-                url: '../sql_php/add_msg.php',
+                url: '../oop_php/add_msg.php',
                 data: {
                     msg: msg
                 },
@@ -37,7 +35,7 @@ $(document).ready(function () {
     function updateMsg() {
         $.ajax({
             type: 'POST',
-            url: '../sql_php/update_msg.php',
+            url: '../oop_php/update_msg.php',
             success(ressponce) {
                 if (ressponce) {
                     let res = JSON.parse(ressponce);
