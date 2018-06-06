@@ -7,7 +7,10 @@ if (isset($_SESSION)) {
 }
 session_start();
 
-require_once 'connect.php';
+require_once 'create_database.php';
+require_once 'create_table.php';
+
+define('TABLE_NAME', 'login');
 
 if (isset($_POST['login'])) {
     $login = $_POST['login'];
@@ -17,7 +20,6 @@ if (isset($_POST['login'])) {
         $pass = $_POST['pass'];
         $pass = htmlspecialchars($pass);
 
-        define('TABLE_NAME', 'login');
         echo json_encode(select_where_user($connect, TABLE_NAME, $login, $pass, $res));
         $connect->close();
     }
