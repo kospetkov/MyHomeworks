@@ -56,4 +56,4 @@ else {
         }
     }
 }
-file_put_contents($path_to_db, json_encode($dataArray, JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
+file_put_contents($path_to_db, json_encode($dataArray, FILE_APPEND|JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));

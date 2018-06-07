@@ -20,7 +20,7 @@ $(document).ready(function () {
                 success(ressponce) {
                     let res = JSON.parse(ressponce);
                     if (res.error) {
-                        onsole.log(res.error);
+                        console.log(res.error);
                         return;
                     }
                     newMsg(res);
