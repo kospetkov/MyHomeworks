@@ -109,7 +109,7 @@ html, body {
     font-family: Montserrat, serif;
 }
 
-.message {
+.error_message {
     font-size: 28px;
     color: red;
     padding-top: 50px;

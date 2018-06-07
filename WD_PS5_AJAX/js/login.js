@@ -1,18 +1,19 @@
 $(document).ready(function () {
     $('#form').submit(function () {
-        let userName = $('#userName').val();
-        let password = $('#password').val();
-        if (!userName || !password) {
+        const USER_NAME = $('#userName').val();
+        const PASSWORD = $('#password').val();
+
+        if (!USER_NAME || !PASSWORD) {
             let message = 'login and password fields must be filled in';
             errorMessage(message);
             return false;
         }
         $.ajax({
             type: 'POST',
-            url: '../php/login.php',
+            url: 'php/login.php',
             data: {
-                login: userName,
-                pass: password
+                login: USER_NAME,
+                pass: PASSWORD
             },
             success: function (ressponce) {
                 if (ressponce) {
@@ -27,16 +28,16 @@ $(document).ready(function () {
                         return;
                     }
                 }
-                window.location.href = '../php/chat.php';
+                window.location.href = 'php/chat.php';
             }
         });
         return false;
     });
 
     function errorMessage(message) {
-        let p = $('.message');
-        p.css({display: 'block'});
-        p.text(message);
+        let errorMessage = $('.error_message');
+        errorMessage.css({display: 'block'});
+        errorMessage.text(message);
         $('.p2_form').css({display: 'none'});
         $('#password').css({border: '5px solid red'});
     }

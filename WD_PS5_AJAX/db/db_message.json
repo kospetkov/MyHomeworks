@@ -1,282 +1,37 @@
 [
     {
         "id": 0,
-        "idUser": 15,
-        "user": "sbk;nm'oy;mk x ,'gkjpdr;.vsz?EG;k",
-        "date": 1528151622000,
-        "msg": "ko"
+        "idUser": 25,
+        "user": "sasa",
+        "date": 1528384001000,
+        "msg": "kjlhgj"
     },
     {
         "id": 1,
-        "idUser": 15,
-        "user": "sbk;nm'oy;mk x ,'gkjpdr;.vsz?EG;k",
-        "date": 1528151627000,
+        "idUser": 1,
+        "user": "w",
+        "date": 1528384062000,
         "msg": "<img src=\"..\/img\/smile.gif\" alt=\"smile\">"
     },
     {
         "id": 2,
-        "idUser": 15,
-        "user": "sbk;nm'oy;mk x ,'gkjpdr;.vsz?EG;k",
-        "date": 1528151635000,
+        "idUser": 25,
+        "user": "sasa",
+        "date": 1528384071000,
         "msg": "<img src=\"..\/img\/sad.gif\" alt=\"smile\">"
     },
     {
         "id": 3,
-        "idUser": 15,
-        "user": "sbk;nm'oy;mk x ,'gkjpdr;.vsz?EG;k",
-        "date": 1528151669000,
-        "msg": "&lt;script&gt;alert('vvv')&lt;\/script&gt;"
+        "idUser": 1,
+        "user": "w",
+        "date": 1528384108000,
+        "msg": "&lt;script&gt;alert('jhg')&lt;\/script&gt;"
     },
     {
         "id": 4,
-        "idUser": 15,
-        "user": "sbk;nm'oy;mk x ,'gkjpdr;.vsz?EG;k",
-        "date": 1528152261000,
-        "msg": "<img src=\"..\/img\/smile.gif\" alt=\"smile\">"
-    },
-    {
-        "id": 5,
-        "idUser": 15,
-        "user": "sbk;nm'oy;mk x ,'gkjpdr;.vsz?EG;k",
-        "date": 1528152272000,
-        "msg": "<img src=\"..\/img\/sad.gif\" alt=\"smile\">"
-    },
-    {
-        "id": 6,
-        "idUser": 15,
-        "user": "sbk;nm'oy;mk x ,'gkjpdr;.vsz?EG;k",
-        "date": 1528152306000,
-        "msg": "&lt;script&gt;alert('ggg')&lt;\/script&gt;"
-    },
-    {
-        "id": 7,
-        "idUser": 1,
-        "user": "koss",
-        "date": 1528152360000,
-        "msg": "&lt;script&gt;alert('cc')&lt;\/script&gt;"
-    },
-    {
-        "id": 8,
-        "idUser": 1,
-        "user": "koss",
-        "date": 1528152374000,
-        "msg": "&lt;"
-    },
-    {
-        "id": 9,
-        "idUser": 1,
-        "user": "koss",
-        "date": 1528152377000,
-        "msg": "&gt;"
-    },
-    {
-        "id": 10,
-        "idUser": 1,
-        "user": "koss",
-        "date": 1528152380000,
-        "msg": "<img src=\"..\/img\/smile.gif\" alt=\"smile\">"
-    },
-    {
-        "id": 11,
-        "idUser": 1,
-        "user": "koss",
-        "date": 1528152383000,
-        "msg": "<img src=\"..\/img\/sad.gif\" alt=\"smile\">"
-    },
-    {
-        "id": 12,
-        "idUser": 1,
-        "user": "koss",
-        "date": 1528153695000,
-        "msg": "ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg"
-    },
-    {
-        "id": 13,
-        "idUser": 1,
-        "user": "koss",
-        "date": 1528154007000,
-        "msg": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
-    },
-    {
-        "id": 14,
-        "idUser": 1,
-        "user": "koss",
-        "date": 1528154842000,
-        "msg": "<img src=\"..\/img\/smile.gif\" alt=\"smile\">"
-    },
-    {
-        "id": 15,
-        "idUser": 1,
-        "user": "koss",
-        "date": 1528154874000,
-        "msg": "&lt;script&gt;alert('fff')&lt;\/script&gt;"
-    },
-    {
-        "id": 16,
-        "idUser": 1,
-        "user": "koss",
-        "date": 1528154892000,
-        "msg": "lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll"
-    },
-    {
-        "id": 17,
-        "idUser": 1,
-        "user": "koss",
-        "date": 1528155659000,
-        "msg": "<img src=\"..\/img\/smile.gif\" alt=\"smile\">"
-    },
-    {
-        "id": 18,
-        "idUser": 1,
-        "user": "koss",
-        "date": 1528155663000,
-        "msg": "<img src=\"..\/img\/sad.gif\" alt=\"smile\">"
-    },
-    {
-        "id": 19,
-        "idUser": 1,
-        "user": "koss",
-        "date": 1528155687000,
-        "msg": "&lt;"
-    },
-    {
-        "id": 20,
-        "idUser": 1,
-        "user": "koss",
-        "date": 1528155689000,
-        "msg": "&gt;"
-    },
-    {
-        "id": 21,
-        "idUser": 1,
-        "user": "koss",
-        "date": 1528155720000,
-        "msg": "&lt;script&gt;alert('dodo')&lt;\/script&gt;"
-    },
-    {
-        "id": 22,
-        "idUser": 1,
-        "user": "koss",
-        "date": 1528155729000,
-        "msg": "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
-    },
-    {
-        "id": 23,
-        "idUser": 15,
-        "user": "sbk;nm'oy;mk x ,'gkjpdr;.vsz?EG;k",
-        "date": 1528155991000,
-        "msg": "DSFGHJK,.;,MLIKNUJBYH<img src=\"..\/img\/smile.gif\" alt=\"smile\">"
-    },
-    {
-        "id": 24,
-        "idUser": 16,
-        "user": "&lt;script&gt;alert('fugo')&lt;\/script&gt;",
-        "date": 1528156309000,
-        "msg": "&lt;script&gt;alert('banana')&lt;\/script&gt;'"
-    },
-    {
-        "id": 25,
-        "idUser": 16,
-        "user": "&lt;script&gt;alert('fugo')&lt;\/script&gt;",
-        "date": 1528156476000,
-        "msg": "<img src=\"..\/img\/smile.gif\" alt=\"smile\">"
-    },
-    {
-        "id": 26,
-        "idUser": 16,
-        "user": "&lt;script&gt;alert('fugo')&lt;\/script&gt;",
-        "date": 1528156481000,
-        "msg": "<img src=\"..\/img\/sad.gif\" alt=\"smile\">"
-    },
-    {
-        "id": 27,
-        "idUser": 16,
-        "user": "&lt;script&gt;alert('fugo')&lt;\/script&gt;",
-        "date": 1528156523000,
-        "msg": "&lt;script&gt;alert('cd')&lt;\/script&gt;"
-    },
-    {
-        "id": 28,
-        "idUser": 16,
-        "user": "&lt;script&gt;alert('fugo')&lt;\/script&gt;",
-        "date": 1528156564000,
-        "msg": "<img src=\"..\/img\/sad.gif\" alt=\"smile\"><img src=\"..\/img\/smile.gif\" alt=\"smile\">"
-    },
-    {
-        "id": 29,
-        "idUser": 16,
-        "user": "&lt;script&gt;alert('fugo')&lt;\/script&gt;",
-        "date": 1528156573000,
-        "msg": "&lt;"
-    },
-    {
-        "id": 30,
-        "idUser": 16,
-        "user": "&lt;script&gt;alert('fugo')&lt;\/script&gt;",
-        "date": 1528156575000,
-        "msg": "&gt;"
-    },
-    {
-        "id": 31,
-        "idUser": 16,
-        "user": "&lt;script&gt;alert('fugo')&lt;\/script&gt;",
-        "date": 1528156611000,
-        "msg": "&lt;script&gt;alert('dafme')&lt;\/script&gt;"
-    },
-    {
-        "id": 32,
-        "idUser": 16,
-        "user": "&lt;script&gt;alert('fugo')&lt;\/script&gt;",
-        "date": 1528156623000,
-        "msg": "<img src=\"..\/img\/smile.gif\" alt=\"smile\">"
-    },
-    {
-        "id": 33,
-        "idUser": 16,
-        "user": "&lt;script&gt;alert('fugo')&lt;\/script&gt;",
-        "date": 1528156735000,
-        "msg": "<img src=\"..\/img\/smile.gif\" alt=\"smile\">"
-    },
-    {
-        "id": 34,
-        "idUser": 16,
-        "user": "&lt;script&gt;alert('fugo')&lt;\/script&gt;",
-        "date": 1528156737000,
-        "msg": "<img src=\"..\/img\/sad.gif\" alt=\"smile\">"
-    },
-    {
-        "id": 35,
-        "idUser": 16,
-        "user": "&lt;script&gt;alert('fugo')&lt;\/script&gt;",
-        "date": 1528156781000,
-        "msg": "&lt;script&gt;alert('durick')&lt;\/script&gt;"
-    },
-    {
-        "id": 36,
-        "idUser": 16,
-        "user": "&lt;script&gt;alert('fugo')&lt;\/script&gt;",
-        "date": 1528157027000,
-        "msg": "<img src=\"..\/img\/smile.gif\" alt=\"smile\">"
-    },
-    {
-        "id": 37,
-        "idUser": 16,
-        "user": "&lt;script&gt;alert('fugo')&lt;\/script&gt;",
-        "date": 1528157031000,
-        "msg": "<img src=\"..\/img\/sad.gif\" alt=\"smile\">"
-    },
-    {
-        "id": 38,
-        "idUser": 16,
-        "user": "&lt;script&gt;alert('fugo')&lt;\/script&gt;",
-        "date": 1528157042000,
-        "msg": "&lt;script&gt;alert('fugo')&lt;\/script&gt;"
-    },
-    {
-        "id": 39,
-        "idUser": 17,
-        "user": "tropick",
-        "date": 1528157461000,
-        "msg": "hi <img src=\"..\/img\/smile.gif\" alt=\"smile\">"
+        "idUser": 25,
+        "user": "sasa",
+        "date": 1528384162000,
+        "msg": "&lt;script&gt;alert('nnn')&lt;\/script&gt;"
     }
 ]

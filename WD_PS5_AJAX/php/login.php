@@ -7,7 +7,7 @@ if ($res['error']) {
     return;
 }
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('location: index.html');
+    header('location: ../index.html');
 }
 if (isset($_SESSION)) {
     session_destroy();

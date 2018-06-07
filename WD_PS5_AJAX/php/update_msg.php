@@ -1,7 +1,7 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('location: index.html');
+    header('location: ../index.html');
 }
 
 $path_to_db = '../db/db_message.json';
