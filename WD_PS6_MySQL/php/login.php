@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('location: index.php');
+    header('location: ../index.php');
 }
 if (isset($_SESSION)) {
     session_destroy();

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const TIME = 1000;
+    const TIME = 500;
     let windowForMessage = $('.window_for_message');
     updateMsg();
     setTimeout(function update() {
@@ -9,23 +9,24 @@ $(document).ready(function () {
 
     $('#form_chat').submit(function () {
         let textarea = $('.textarea');
-        let msg = textarea.val();
-        if (msg) {
+        const MESSAGE = textarea.val();
+        if (MESSAGE) {
             $.ajax({
                 type: 'POST',
                 url: '../php/add_msg.php',
                 data: {
-                    msg: msg
+                    msg: MESSAGE
                 },
                 success(ressponce) {
-                    let res = JSON.parse(ressponce);
-
-                    if (res[0]['error']) {
-                        console.log(res[0]['error']);
-                        return;
+                    if (ressponce) {
+                        let res = JSON.parse(ressponce);
+                        if (res.error) {
+                            console.log(res[0]['error']);
+                            return;
+                        }
+                        newMsg(res[0]);
+                        windowForMessage.scrollTop(windowForMessage.prop('scrollHeight'));
                     }
-                    newMsg(res[0]);
-                    windowForMessage.scrollTop(windowForMessage.prop('scrollHeight'));
                 }
             });
             textarea.val('');
@@ -40,23 +41,24 @@ $(document).ready(function () {
             success(ressponce) {
                 if (ressponce) {
                     let res = JSON.parse(ressponce);
-                    windowForMessage.empty();
                     let resLength = res.length;
+                    windowForMessage.empty();
                     for (let i = 0; i < resLength; i++) {
                         let item = res[i];
                         newMsg(item);
                     }
                 }
             }
+
         });
     }
 
     function newMsg(item) {
-        let itemMsg = item.msg;
         let PForMsg = $('<p>', {class: 'p_for_msg'});
+        PForMsg.attr({id: item.id});
         let time = new Date(item.date);
         let format = time.toLocaleTimeString('en-GB');
-        let text = '<ins>[ ' + format + ' ]  ' + item.user + ' :</ins> ' + itemMsg;
+        let text = '<ins>[ ' + format + ' ]  ' + item.user + ' :</ins> ' + item.msg;
         PForMsg.append(text);
         windowForMessage.append(PForMsg);
     }
