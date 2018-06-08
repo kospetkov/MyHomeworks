@@ -1,3 +1,7 @@
+<?php
+require_once 'php/create_database.php';
+require_once 'php/create_table.php';
+?>
 
 <!doctype html>
 <html lang="en">
@@ -16,10 +20,9 @@
         <div style="color: red">
         </div>
         <input type="submit" class="submit" value="submit">
-        
+        <input type="reset" class="submit" value="reset">
     </form>
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
     <script src="js/functions.js"></script>
 </body>
 </html>

@@ -9,23 +9,11 @@ server version
 create database
 ================
 
--NAME => linck_db
--server_name => localhost
--user_name => root
--password => ''
--port => 3306
-----------------------------------------------------
+please enter data for include database in "php/create_database.php"
 
-create table
-================
-
--NAME => linck_tabl
--comparison => utf8_general_ci
--id => int(11), UNSIGNED, AUTO_INCREMENT
--linck => text, utf8_general_ci
--new_linck => varchar(255), utf8_general_ci
--using_linck => int(11)
--ip_user => varchar(15), utf8_general_ci
--time => timestamp, CURRENT_TIMESTAMP, ON APDATE CURRENT_TIMESTAMP
--time_create => datetime, CURRENT_TIMESTAMP
+'server_name' => "your url domen"
+'user_name' => "your login"
+'password' => "your password"
+'db_name' => "your database name"
+'port' => "your number port"
 -----------------------------------------------------

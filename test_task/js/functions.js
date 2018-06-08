@@ -1,10 +1,8 @@
 
 $(document).ready(function () {
-
     $('#form_linck').submit(function () {
         let textarea = $('.textarea_for_linck');
         let valueForTextarea = textarea.val();
-
        $.ajax({
             type: 'POST',
             url: 'php/functions.php',
@@ -14,24 +12,15 @@ $(document).ready(function () {
             success(responce) {
                 console.log(responce);
                 let res = JSON.parse(responce);
-
                 if (res[0]['error']) {
                     console.log(res[0]['error']);
                     return;
-                }
-
-                else if (res[0]['linck']) {
+                } else if (res[0]['linck']) {
                     let linck = res[0]['linck'];
-                    console.log(linck);
-                    textarea.val('');
+                    //textarea.val('');
                     window.location.href = linck;
-                }
-
-                else if (res[0]['new_linck']) {
+                } else if (res[0]['new_linck']) {
                     let status = res[0]['new_linck'];
-                    let ip = res[0]['id'];
-                    console.log(status);
-                    console.log(ip);
                     textarea.val(status);
                 }
             }
