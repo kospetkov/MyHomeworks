@@ -38,14 +38,16 @@ function select_where_user($connect, $table_name, $login, $pass, $res) {
     $stmt->execute();
     $result = $stmt->get_result();
     if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $password = $row['pass'];
+        $row = $result->fetch_assoc();
+        $password = $row['pass'];
+//        while ($row = $result->fetch_assoc()) {
+//            $password = $row['pass'];
             if ($pass === $password) {
                 $_SESSION['login'] = $login;
                 $stmt->close();
                 return $res;
             }
-        }
+        //}
         $res['password'] = 'incorrect password';
         $res['status'] = '';
         $stmt->close();

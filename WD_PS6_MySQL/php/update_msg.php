@@ -8,7 +8,7 @@ require_once 'connect.php';
 define('LIMIT', '3600');
 define('TABLE_NAME', 'messages');
 
-echo select_for_limit_time($connect, TABLE_NAME);
+echo json_encode(select_for_limit_time($connect, TABLE_NAME));
 $connect->close();
 
 
@@ -36,7 +36,7 @@ function select_for_limit_time($connect, $table_name) {
         }
     }
     $stmt->close();
-    return json_encode($data_array);
+    return $data_array;
 }
 
 /**

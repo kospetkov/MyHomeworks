@@ -9,7 +9,7 @@ if ($res['error']) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('location: index.html');
+    header('location: ../index.html');
 }
 
 session_start();

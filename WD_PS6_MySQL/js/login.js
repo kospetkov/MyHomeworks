@@ -8,6 +8,7 @@ $(document).ready(function () {
             errorMessage(message);
             return false;
         }
+
         $.ajax({
             type: 'POST',
             url: 'php/login.php',
@@ -35,10 +36,10 @@ $(document).ready(function () {
     });
 
     function errorMessage(message) {
-        let errorMessage = $('.error_message');
-        errorMessage.css({display: 'block'});
-        errorMessage.text(message);
-        $('.p2_form').css({display: 'none'});
+        //let errorMessage = $('.error_message');
+        // errorMessage.css({display: 'block'});
+        $('.p2_form').text(message);
+        // $('.p2_form').css({display: 'none'});
         $('#password').css({border: '5px solid red'});
     }
 });
