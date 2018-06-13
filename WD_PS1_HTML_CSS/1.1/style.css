@@ -21,7 +21,6 @@ body {
   background: rgb(200, 100, 100);
   display: flex;
   justify-content: center;
-  z-index: 4;
 }
 
 .header {
@@ -38,10 +37,14 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-grow: 999;
 }
 
 .wrapper-for-column {
-
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .content {
@@ -62,21 +65,18 @@ body {
 }
 
 .content__column-left {
-  overflow-x: hidden;
   width: 33%;
   background: rgb(100, 200, 100);
   color: rgba(200, 50, 200, 0.5);
 }
 
 .content__column-center {
-  overflow-x: hidden;
   width: 33%;
   background: rgb(150, 150, 150);
   color: rgba(200, 200, 50, 0.6);
 }
 
 .content__column-right {
-  overflow-x: hidden;
   width: 33%;
   background: rgb(70, 70, 70);
   color: yellow;
