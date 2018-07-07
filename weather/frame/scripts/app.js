@@ -21,7 +21,7 @@ $(document).ready(function () {
                     $('.weather-icon').text('').append(weather);
 
                     let resLength = res.length;
-                    let container = $('<div>');
+                    let container = $('<div>', {class: 'item_wrapper'});
                     for (let i = 0; i < resLength; i ++) {
                         let newDiv = $('<div>', {class: 'hourly-forecast clearfix'});
                         let itemDate = $('<div>', {class: 'forecast-date'});
@@ -29,17 +29,15 @@ $(document).ready(function () {
                         itemDate.text(textForDate);
                         newDiv.append(itemDate);
 
-                        let section = $('<div>', {class: 'forecast-weather'});
                         let itemTemp = $('<div>', {class: 'forecast-temperature'});
                         let textTemp = res[i].temp;
                         itemTemp.append(textTemp);
-                        section.append(itemTemp);
+                        newDiv.append(itemTemp);
 
                         let itemIcon = $('<div>', {class: 'forecast-icon'});
                         let icon = res[i].description;
                         itemIcon.append(icon);
-                        section.append(itemIcon);
-                        newDiv.append(section);
+                        newDiv.append(itemIcon);
                         container.append(newDiv);
                     }
                     $('.forecast').empty().append(container);
