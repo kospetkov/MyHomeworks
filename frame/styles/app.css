@@ -1,0 +1,166 @@
+
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #394165;
+    //background-color: chocolate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.main-wrapper {
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+header {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #1a4f95;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding: 10px 0;
+}
+
+h1 {
+    font-size: 1em;
+}
+.city {
+    color: gold;
+    font-family: cursive;
+    font-size: 1.5em;
+}
+
+nav {
+    background-color: #1a4f95;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*nav a {
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    width: 33%;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    float: left;
+}*/
+a {
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+}
+
+.container {
+   border: solid 1px cornflowerblue;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.all_wrapper {
+    display: flex;
+}
+
+.all-50 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-icon {
+    width: 100%;
+}
+
+.weather-icon svg {
+    width: 50px;
+}
+
+.now {
+    text-align: center;
+    background-color: #3469af;
+}
+
+.now .date {
+    font-size: 1.3em;
+}
+
+.current-temperature {
+    font-size: 1.5em;
+}
+
+.hourly-forecast {
+    border-bottom: 2px solid #483D8B;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.forecast-date {
+    display: flex;
+    align-items: center;
+    //padding-left: 27px;
+}
+
+.forecast-weather {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.forecast-temperature, .forecast-icon {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.forecast-icon {
+    max-width: 30px;
+}
+
+.forecast-icon svg {
+    width: 30px;
+   // transform: translateY(31%);
+}
+
+svg {
+    fill: white;
+}
+
+.api {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+}
+
+.api-text {
+    color: green;
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: bold;
+    display: flex;
+}
+
+.item_wrapper {
+    display: flex;
+    flex-direction: column;
+}

@@ -8,57 +8,58 @@ define('CITY_ID', 1);
 
 require_once 'connect.php';
 
-echo json_encode(get_data_from_table($connect, POLE_1, POLE_2,POLE_3, TABLE_NAME, CITY_ID));
+echo json_encode(getDataFromTable($connect, POLE_1, POLE_2,POLE_3, TABLE_NAME, CITY_ID));
 $connect->close();
 
 
 /**
  * @param $connect
- * @param $pole_1
- * @param $pole_2
- * @param $pole_3
- * @param $table_name
- * @param $city_id
+ * @param $pole1
+ * @param $pole2
+ * @param $pole3
+ * @param $tableName
+ * @param $cityId
  * @return array
  */
-function get_data_from_table($connect, $pole_1, $pole_2, $pole_3, $table_name, $city_id) {
-    $data_array = [];
-    $stmt = $connect->prepare("SELECT $pole_1, $pole_2, $pole_3 FROM $table_name WHERE city_id = ?");
-    $stmt->bind_param("i", $city_id);
+function getDataFromTable($connect, $pole1, $pole2, $pole3, $tableName, $cityId) {
+    $dataArray = [];
+    $stmt = $connect->prepare("SELECT $pole1, $pole2, $pole3 FROM $tableName WHERE city_id = ?");
+    $stmt->bind_param("i", $cityId);
     $stmt->execute();
     $result = $stmt->get_result();
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            $str_date = $row['timestamp'];
-            $str_date = strtotime($str_date);
-            $dates = date('l j/m', $str_date);
-            $times = date('H:i', $str_date);
-            $data_array[] = [
+            $strDate = $row['timestamp'];
+            $strDate = strtotime($strDate);
+            $dates = date('l j/m', $strDate);
+            $times = date('H:i', $strDate);
+            $dataArray[] = [
                 'date' => $dates,
                 'time' => $times,
                 'temp' => $row['temperature'] . '&deg;',
-                'description' => get_icon($row['rain_possibility'])
+                'description' => getIcon($row['rain_possibility'])
             ];
         }
     }
     $stmt->close();
-    return $data_array;
+    return $dataArray;
 }
 
 /**
- * @param $rain_possibility
+ * @param $rainPossibility
  * @return bool|string
  */
-function get_icon($rain_possibility) {
-    if ($rain_possibility <= 0.2) {
+function getIcon($rainPossibility)
+{
+    if ($rainPossibility <= 0.2) {
         return file_get_contents('../img/icons/002-sun.svg');
-    }else if (($rain_possibility > 0.2) && ($rain_possibility <= 0.4)) {
+    }elseif (($rainPossibility > 0.2) && ($rainPossibility <= 0.4)) {
         return file_get_contents('../img/icons/004-sky-1.svg');
-    } else if (($rain_possibility > 0.4) && ($rain_possibility <= 0.6)) {
+    } elseif (($rainPossibility > 0.4) && ($rainPossibility <= 0.6)) {
         return file_get_contents('../img/icons/005-sky.svg');
-    } else if (($rain_possibility > 0.6) && ($rain_possibility <= 0.9)) {
-        return file_get_contents('../img/icons/003-rain.svg');
-    } else if ($rain_possibility > 0.9) {
+    } elseif (($rainPossibility > 0.6) && ($rainPossibility <= 0.9)) {
+         return file_get_contents('../img/icons/003-rain.svg');
+    } elseif ($rainPossibility > 0.9) {
         return file_get_contents('../img/icons/001-flash.svg');
     }
 }

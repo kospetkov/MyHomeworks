@@ -1,43 +1,39 @@
 <?php
 
-//$curr_date = json_decode(file_get_contents('http://api.openweathermap.org/data/2.5/weather?q=Kropyvnytskyi&APPID=e7899704b54b8536bda7eff86668b6bb'), true);
-//$current_date = $curr_date['dt'];
-//$current_date = date('l j/m', $current_date);
 define('PERIOD_FORECAST', '8');
+
 $dataArray = json_decode(file_get_contents('http://api.openweathermap.org/data/2.5/forecast?q=Kropyvnytskyi&APPID=e7899704b54b8536bda7eff86668b6bb'), true);
-$arr = [];
+$newDataArray = [];
 
 for ($i = 0; $i < PERIOD_FORECAST; $i ++) {
-    $weather_main = $dataArray['list'][4]['weather'][0]['main'];
-    $weather_description = $dataArray['list'][$i]['weather'][0]['description'];
-    $weather_icon = $dataArray['list'][$i]['weather'][0]['icon'];
+    $weatherMain = $dataArray['list'][4]['weather'][0]['main'];
+    $weatherDescription = $dataArray['list'][$i]['weather'][0]['description'];
+    $weatherIcon = $dataArray['list'][$i]['weather'][0]['icon'];
     $temp = $dataArray['list'][$i]['main']['temp'];
     $temp = ceil($temp - 273.15) . '&deg;';
-    $str_date = $dataArray['list'][$i]['dt'];
-    $dates = date('l j/m', $str_date);
-    $times = date('H:i', $str_date);
-    //if ($dates === $current_date) {
-        $arr[] = [
-            'date' => $dates,
-            'time' => $times,
-            'temp' => $temp,
-            'description' => get_icon($weather_description)
-        ];
-  //  }
+    $strDate = $dataArray['list'][$i]['dt'];
+    $dates = date('l j/m', $strDate);
+    $times = date('H:i', $strDate);
+    $newDataArray[] = [
+        'date' => $dates,
+        'time' => $times,
+        'temp' => $temp,
+        'description' => getIcon($weatherDescription)
+    ];
 }
 
-echo json_encode($arr);
+echo json_encode($newDataArray);
 
 /**
  * @param $weather_description
  * @return bool|string
  */
-function get_icon($weather_description) {
-    if ($weather_description === 'clear sky') {
+function getIcon($weatherDescription) {
+    if ($weatherDescription === 'clear sky') {
         return file_get_contents('../img/icons/002-sun.svg');
-    } else if (($weather_description === 'broken clouds') || ($weather_description === 'few clouds') || ($weather_description === 'scattered clouds')) {
+    } elseif (($weatherDescription === 'broken clouds') || ($weatherDescription === 'few clouds') || ($weatherDescription === 'scattered clouds')) {
         return file_get_contents('../img/icons/004-sky-1.svg');
-    } else if (($weather_description === 'light rain') || ($weather_description === 'moderate rain')) {
+    } elseif (($weatherDescription === 'light rain') || ($weatherDescription === 'moderate rain')) {
         return file_get_contents('../img/icons/003-rain.svg');
     }
 }
