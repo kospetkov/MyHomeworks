@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b34645e9-fbb8-4bea-9bc7-2fa7e9c225ad" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1483440883">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="29" />
+          <entry key="project.open.time.0" value="18" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.40" value="1" />
+          <entry key="project.open.time.44" value="1" />
+          <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.55" value="1" />
+          <entry key="project.open.time.57" value="1" />
+          <entry key="project.open.time.69" value="1" />
+          <entry key="project.opened" value="31" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="6" />
+          <entry key="html" value="177" />
+          <entry key="js" value="8" />
+          <entry key="scss" value="26" />
+          <entry key="svg" value="2" />
+          <entry key="xml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="6" />
+          <entry key="HTML" value="177" />
+          <entry key="JavaScript" value="8" />
+          <entry key="SCSS" value="26" />
+          <entry key="SVG" value="2" />
+          <entry key="XML" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="4982" />
+          <entry key="js" value="1205" />
+          <entry key="scss" value="3036" />
+          <entry key="svg" value="24" />
+          <entry key="xml" value="2117" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="4982" />
+          <entry key="JavaScript" value="1205" />
+          <entry key="SCSS" value="3036" />
+          <entry key="SVG" value="24" />
+          <entry key="XML" value="2117" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>subcategory-item__name</find>
+      <find>item-sub__wrapper</find>
+      <find>: st</find>
+      <find>subcategory</find>
+      <find>subcategory-item__wrapper</find>
+      <find>al_</find>
+      <find>sub-item--img__wrapper</find>
+      <find>subcategory-item__wr</find>
+      <find>subcategory-item__ti</find>
+      <find>.content__text</find>
+      <find>subcategory__item</find>
+      <find>subcategory__item {</find>
+      <find>prise-list__content</find>
+      <find>prise-list__button</find>
+      <find>nav</find>
+      <find>one-product--img__wrapper</find>
+      <find>one</find>
+      <find>main-content</find>
+      <find>conte</find>
+      <find>sidebar {</find>
+      <find>alt=</find>
+      <find>content__text</find>
+      <find>contacts__content</find>
+      <find>&lt;img</find>
+      <find>обладает питательными, смягчающими и бактерицидными свойствами</find>
+      <find>Poly-Helixan (snails)</find>
+      <find>Hyaluronic Acid</find>
+      <find>Peelmoist</find>
+      <find>Opuntia (Cactus) Extract</find>
+      <find>Cocamidopropyl Betaine</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\xampp\htdocs\kotel_zip\app\assets\desktop\dev</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/MyHomeworks" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dist/main.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dist/img/location.svg" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dist/img/email.svg" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/header_categoty.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/scss/style.scss" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/form.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/content__text.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/scss/blocks/one_product.scss" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/js/scripts/functions.js" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/nav--menu.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/scss/blocks/fonts.scss" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/nav-menu.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/one_product__table.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/content_text.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/article.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/contacts_content.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/scripts.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/pages/article.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/pages/contacts.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/pages/main.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/pages/one_product.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/pages/prise_list.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/head.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/category__content.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/footer.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/header.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/header_category.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/one-product__wrapper.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/prise-list__content.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/sidebar.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/slider.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/article_fuels.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/pages/category.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/pages/article_fuels.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/pages/article_heat-accumulator.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/article-heat-accumulator_content.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/article_content.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/pages/article_fuel-calculation.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/pages/article_economic.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/article-economic_content.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/pages/all_articles.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/all-articles_content.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/scss/blocks/content.scss" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/pages/about.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/scss/blocks/update.scss" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/about_content.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/article-fuel-calculation_content.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/article-fuels_content.html" />
+        <option value="$PROJECT_DIR$/app/assets/desktop/dist/rozetka.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/app/assets/desktop/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/MyHomeworks/WD_PS1_HTML_CSS/package.json" />
+      <path value="$PROJECT_DIR$/app/assets/desktop/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="793" />
+    <option name="width" value="814" />
+    <option name="height" value="867" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="kotel_zip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kotel_zip" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\kotel_zip\MyHomeworks" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b34645e9-fbb8-4bea-9bc7-2fa7e9c225ad" name="Default Changelist" comment="" />
+      <created>1551717823921</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551717823921</updated>
+      <workItem from="1551717891217" duration="888000" />
+      <workItem from="1551722309253" duration="27536000" />
+      <workItem from="1551773382011" duration="29000" />
+      <workItem from="1551960060218" duration="433000" />
+      <workItem from="1552121832760" duration="13938000" />
+      <workItem from="1552164597959" duration="25145000" />
+      <workItem from="1552226860006" duration="76000" />
+      <workItem from="1552232370229" duration="1095000" />
+      <workItem from="1552308381619" duration="1348000" />
+      <workItem from="1552334469494" duration="6143000" />
+      <workItem from="1552341735071" duration="4851000" />
+      <workItem from="1552376985537" duration="5161000" />
+      <workItem from="1552411560412" duration="2159000" />
+      <workItem from="1552414725811" duration="1562000" />
+      <workItem from="1552418060371" duration="12007000" />
+      <workItem from="1552466016269" duration="625000" />
+      <workItem from="1552501432019" duration="13425000" />
+      <workItem from="1552557120265" duration="3686000" />
+      <workItem from="1552562514695" duration="748000" />
+      <workItem from="1552571365574" duration="618000" />
+      <workItem from="1552577546559" duration="7363000" />
+      <workItem from="1552630271266" duration="616000" />
+      <workItem from="1552636131867" duration="129000" />
+      <workItem from="1552637580902" duration="459000" />
+      <workItem from="1552640748715" duration="1055000" />
+      <workItem from="1552656821074" duration="968000" />
+      <workItem from="1552749686635" duration="12136000" />
+      <workItem from="1552837901302" duration="334000" />
+      <workItem from="1552900605299" duration="265000" />
+      <workItem from="1552934053602" duration="14803000" />
+      <workItem from="1553274609329" duration="1028000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="160629000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3198198" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3287483" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.26547456" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dist/img/email.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.999/custom.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.675/custom.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.047/run-owl-carousel.js" />
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dist/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="220" column="39" lean-forward="true" selection-start-line="220" selection-start-column="39" selection-end-line="220" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../polonskaya/desktop/kotel/assets/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/kotel/html/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/js/scripts/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../polonskaya/desktop/kv2/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/pages/contacts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/pages/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/pages/one_product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/header_category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/nav-menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/one-product__wrapper.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/one_product__table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/prise-list__content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/scripts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="88" column="36" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/pages/prise_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/slider.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/article_fuels.html" />
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/pages/category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/pages/article_fuels.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="7" lean-forward="true" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/pages/article_heat-accumulator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="59" lean-forward="true" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/pages/article_fuel-calculation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/pages/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/pages/article_economic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/pages/all_articles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/pages/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/all-articles_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/about_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/article-economic_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/article-fuel-calculation_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/contacts_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/content_text.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/article-heat-accumulator_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-439">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/article_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/category_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="546" column="68" selection-start-line="546" selection-start-column="68" selection-end-line="546" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/html/blocks/article-fuels_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/kotel/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6768" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/scss/blocks/update.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="367" column="24" selection-start-line="367" selection-start-column="24" selection-end-line="367" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/scss/blocks/one_product.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/scss/blocks/fonts.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/scss/blocks/content.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="290" column="6" selection-start-line="290" selection-start-column="6" selection-end-line="290" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dev/scss/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/desktop/dist/rozetka.xml" />
+  </component>
+</project>

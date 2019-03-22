@@ -1,0 +1,415 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url("../img/BG.png");
+}
+body a {
+  text-decoration: none;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.main__wrapper {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  //background-image: url("../img/BG.png");
+  padding-left: 3%;
+  margin: 0 auto;
+  max-width: 1440px;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+.main-content {
+  width: 33%;
+  max-width: 396px;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+}
+
+ header {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px -10px 15px 5px rgba(0, 0, 0, 0.5);
+  background-color: #000000;
+}
+header .main-logo__wrapper {
+  width: 100%;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+header .main-logo__wrapper .logo {
+  width: 100%;
+  height: auto;
+}
+header .contact__wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 10px 8%;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+header .contact__wrapper .phone {
+  width: 30px;
+  height: 30px;
+}
+header .contact__wrapper .phone-number__wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-left: 25px;
+}
+header .contact__wrapper .phone-number__wrapper .phone-number {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-family: "Microsoft HBD", sans-serif;
+  padding: 5px;
+}
+.slider {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+.slider .slider__wrapper {
+  width: 100%;
+  height: auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  /* padding-right: 619px; */
+  //margin-left: -100%;
+}
+.slider .slider__wrapper .slider-img__wrapper {
+  //width: 837px;
+  display: -ms-flexbox;
+  width: 100%;
+  //display: flex;
+  /* padding-right: 619px; */
+}
+.slider .slider__wrapper .slider-img__wrapper .slider-img {
+  width: 100%;
+  //height: auto;
+}
+
+.sidebar {
+  //height: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #000000;
+  width: 100%;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+
+  &.fixed {
+    position: sticky;
+    top: 0;
+  }
+}
+
+.sidebar .sidebar__wrapper {
+  width: 100%;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.sidebar .sidebar__wrapper .category__wrapper {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+}
+.sidebar .sidebar__wrapper .category__wrapper .category__item {
+  width: 100%;
+  height: 102px;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 5%;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  //transition: 0.2s ease;
+  //position: relative;
+}
+.sidebar .sidebar__wrapper .category__wrapper .category__item:hover {
+  background-color: #ee1b22;
+  box-shadow: inset 0px 0px 1px 2px #ffffff;
+  border: none;
+  padding-bottom: 1px;
+}
+.sidebar .sidebar__wrapper .category__wrapper .category__item:hover .subcategory {
+  display: -ms-flexbox;
+  display: flex;
+}
+.sidebar .sidebar__wrapper .category__wrapper .category__item .category__icon {
+  width: 50px;
+  height: 50px;
+}
+.sidebar .sidebar__wrapper .category__wrapper .category__item .category__name {
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-left: 21px;
+  font-family: "Microsoft HBD", sans-serif;
+  line-height: 30px;
+}
+.sidebar .sidebar__wrapper .category__wrapper .category__item .subcategory {
+  display: none;
+  position: absolute;
+  //align-items: stretch;
+  justify-content: center;
+  left: 100%;
+  top: 0;
+  bottom: 0;
+  width: 175%;
+  padding: 5px 20px;
+  background-color: #000000;
+  transition: 0.5s ease;
+  box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.4);
+}
+.sidebar .sidebar__wrapper .category__wrapper .category__item .subcategory .subcategory-item__wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+  //flex-wrap: wrap;
+}
+.sidebar .sidebar__wrapper .category__wrapper .category__item .subcategory .subcategory-item__wrapper .subcategory__item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: row;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  //width: -webkit-max-content;
+  //width: -moz-max-content;
+  //width: 233px;
+  width: 100%;
+  height: 28%;
+  padding: 6px 20px;
+  margin: 5px 0;
+  //background-color: #555861;
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.3);
+}
+.sidebar .sidebar__wrapper .category__wrapper .category__item .subcategory .subcategory-item__wrapper .subcategory__item .subcategory-item__title {
+  font-size: 17px;
+  font-family: RalewayLight,sans-serif;
+  color: #ffffff;
+  //padding: 25px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  //text-align: center;
+  //justify-content: center;
+  margin-top: 7px;
+}
+.sidebar .sidebar__wrapper .category__wrapper .category__item .subcategory .subcategory-item__wrapper .subcategory__item .subcategory-item__name {
+  font-size: 12px;
+  font-family: "RalewayLight", sans-serif;
+  color: #ee1b22;
+  padding: 0 25px;
+  text-transform: uppercase;
+  //transition: 0.5s ease;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+.sidebar .sidebar__wrapper .category__wrapper .category__item .subcategory .subcategory-item__wrapper .subcategory__item .subcategory-item__name:hover {
+  color: #ffffff;
+}
+.bottom__inform {
+  width: 40%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 20px;
+}
+.bottom__inform .inform__item {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 7px 0;
+}
+.inform__item .category__icon {
+  width: 15px;
+  //height: 20px;
+  margin-right: 10px;
+}
+.bottom__inform .inform__item .category__name {
+  font-size: 10px;
+  color: #fff;
+  font-family: "Microsoft HBD", sans-serif;
+}
+
+.content {
+  //padding: 0px 15px;
+  //width: 67%;
+
+  max-width: 997px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.content__text {
+  padding: 50px;
+  height: 100%;
+  //text-align: center;
+
+  h1 {
+    font-family: Ubuntu,sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 0 20px;
+    width: 90%;
+  }
+  h2 {
+    font-family: Ubuntu,sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 0 20px;
+    width: 90%;
+  }
+  h3 {
+    font-family: Ubuntu,sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 0 20px;
+    width: 90%;
+  }
+  p {
+    font-family: MontserratLight,sans-serif;
+    font-size: 14px;
+    margin: 10px;
+    padding: 0 20px;
+    width: 90%;
+  }
+  ul {
+    padding: 0 20px;
+    padding-left: 4%;
+    margin-left: 20px;
+    li {
+      font-family: MontserratLight,sans-serif;
+      font-size: 14px;
+      margin: 5px 10px;
+      width: 60%;
+      list-style-type: disc;
+    }
+  }
+  .article-img__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .article__img {
+      width: 100%;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+.footer {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.footer .footer-item__wrapper {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #555861;
+}
+.footer .footer-item__wrapper .footer__item {
+  width: 20%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 20px;
+  &:last-of-type {
+    padding-top: 10px;
+  }
+}
+
+.footer .footer-item__wrapper .footer__item .footer-item__title {
+  font-size: 16px;
+  color: #ffffff;
+  font-family: "Ubuntu", sans-serif;
+}
+.footer .footer-item__wrapper .footer__item .footer-item__text {
+  font-size: 8px;
+  color: #ffffff;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.category__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.footer-logo__wrapper {
+  display: block;
+
+}
+/*<div class="entry-content">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2222.233188622794!2d32.27133945756152!3d48.51990128476783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d042b2a28088c7%3A0xaf0b1aeb25186d15!2z0LzQsNCz0LDQt9C40L0gItCa0L7RgtC10LtQbHVzIg!5e0!3m2!1sru!2sua!4v1547824899939" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+
+
+
+<blockquote style="text-align:left" class="wp-block-quote"><p><strong>Адрес</strong> :</p><p>Украина, г.Кропивницкий, ул.Вячеслава Черновола 2В, </p><p><strong>телефоны: </strong></p><p>(067) 887-84-68 </p><p>(066) 805-88-46</p><p><strong>e-mail:</strong> kotelplus.kr@gmail.com</p><p></p></blockquote>
+
+						</div>*/
+/*<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2222.233188622794!2d32.27133945756152!3d48.51990128476783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d042b2a28088c7%3A0xaf0b1aeb25186d15!2z0LzQsNCz0LDQt9C40L0gItCa0L7RgtC10LtQbHVzIg!5e0!3m2!1sru!2sua!4v1547824899939" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>*/
