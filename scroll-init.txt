@@ -1,0 +1,180 @@
+/*window.onload = function () {
+    //preLoader();
+};*/
+
+$(document).ready(function () {
+    const arrayDataPages = [];
+    const footer = document.getElementsByTagName('footer');
+    const heightFooter = footer[0].clientHeight;
+
+    pageDataHandler($('.content'), arrayDataPages);
+    setLocation(arrayDataPages[0].url);
+    scrollInit(heightFooter, footer, arrayDataPages);
+});
+
+function scrollInit(heightFooter, footer, arrayDataPages) {
+    let inProgress = false;
+    let count = 1;
+    if (count >= 5) {
+        count = 1;
+    }
+
+    document.addEventListener('scroll', function () {
+        const windowHeight = window.innerHeight;
+        const scrollHeight = window.pageYOffset;
+        const bodyHeight = document.body.clientHeight;
+        const windowTopPoint = scrollHeight;
+        const windowBottomPoint = scrollHeight + windowHeight;
+        const hashUrl = window.location.pathname.split('/')[window.location.pathname.split('/').length - 1];
+        const currentPageData = function () {
+            for (let item of arrayDataPages) {
+                if (item.url === hashUrl) {
+                    return item;
+                }
+            }
+        }();
+        const previosPageData = currentPageData.id > 0 ? arrayDataPages[currentPageData.id - 1] : null;
+        const nextPageData = currentPageData.id + 1 < arrayDataPages.length ? arrayDataPages[currentPageData.id + 1] : null;
+        const $currentPage = $('[data="' + hashUrl + '"]');
+        const blackoutTop = isElement($('.blackout_top'));
+        const blackoutBottom = isElement($('.blackout_bottom'));
+
+        if (blackoutTop && ((windowTopPoint > (currentPageData.topPoint + 100)))) {
+            blackoutRemove(blackoutTop, 'fixed_for_load_top');
+        }
+
+        if (blackoutBottom && (windowBottomPoint < (currentPageData.bottomPoint -100))) {
+            blackoutRemove(blackoutBottom, 'fixed_for_load_bottom');
+        }
+
+        if (!blackoutTop && !blackoutBottom) {
+
+            if (nextPageData && (windowBottomPoint >= (currentPageData.bottomPoint - 100)) && (windowBottomPoint < currentPageData.bottomPoint)) {
+                const $nextPage = $('[data="' + nextPageData.url + '"]');
+                $($('<div>', {'class': 'blackout_bottom'})).insertAfter($nextPage);
+                $('.blackout_bottom').css({'height': nextPageData.height() + 'px'});
+                $nextPage.addClass('fixed_for_load_bottom');
+                $nextPage.find('.sticky-box').css({'position': 'initial'});
+            }
+
+            if (previosPageData && ((windowTopPoint <= (currentPageData.topPoint + 100)) && (windowTopPoint > currentPageData.topPoint))) {
+                const $previosPage = $('[data="' + previosPageData.url + '"]');
+                $previosPage.addClass('fixed_for_load_top');
+                $($previosPage).before($('<div>', {'class': 'blackout_top'}));
+                $('.blackout_top').css({'height': previosPageData.height() + 'px'});
+                $previosPage.css({'height': previosPageData.height() + 'px'});
+            }
+        }
+
+        blackoutBottomControl(blackoutBottom, windowBottomPoint, currentPageData, windowTopPoint, nextPageData);
+        blackoutTopControl(blackoutTop, windowTopPoint, currentPageData, windowBottomPoint, previosPageData);
+
+        if (!inProgress && ((windowHeight + windowTopPoint) >= (bodyHeight - heightFooter - windowHeight))) {
+            inProgress = true;
+            $.ajax({
+                type: 'POST',
+                url: 'js/item_' + count + '.php',
+                success: function (ressponse) {
+                    if (ressponse && inProgress) {
+                        let data = $(ressponse);
+                        $(footer).before(data);
+                        pageDataHandler(data, arrayDataPages);
+                        addStickyElement(data);
+                        initializeScripts(data);
+                        setTimeout(function () {
+                            inProgress = false;
+                            count++;
+                        }, 2000);
+                    }
+                }
+            });
+        }
+    });
+}
+
+function blackoutRemove(blackout, className) {
+    let element = $('.' + className);
+    element.removeClass('' + className);
+    blackout.remove();
+}
+
+function blackoutBottomControl(blackoutBottom, windowBottomPoint, currentPageData, windowTopPoint, nextPageData) {
+    if (blackoutBottom && (windowBottomPoint >= currentPageData.bottomPoint)) {
+        let coef = Math.abs(windowTopPoint - currentPageData.bottomPoint) / 1000;
+        blackoutBottom.css({'background-color': 'rgba(0, 0, 0, ' + coef + ')'});
+
+        if (windowTopPoint >= currentPageData.bottomPoint) {
+            blackoutRemove(blackoutBottom, 'fixed_for_load_bottom');
+            $('[data="' + nextPageData.url + '"]').find('.sticky-box').css({'position': ''}).removeClass('sticky-bottom');
+            setLocation(nextPageData.url);
+
+        }
+    }
+}
+
+function blackoutTopControl(blackoutTop, windowTopPoint, currentPageData, windowBottomPoint, previosPageData) {
+    if (blackoutTop && (windowTopPoint <= currentPageData.topPoint)) {
+
+        let coef = Math.abs(windowBottomPoint - currentPageData.topPoint) / 1000;
+        blackoutTop.css({'background-color': 'rgba(0, 0, 0, ' + coef + ')'});
+
+        if (currentPageData.topPoint >= windowBottomPoint) {
+            blackoutRemove(blackoutTop, 'fixed_for_load_top');
+            setLocation(previosPageData.url);
+        }
+    }
+}
+
+function isElement(element) {
+    return element.length > 0 ? element : false;
+}
+
+function setLocation(hashUrl) {
+    try {
+        history.pushState(null, null, hashUrl);
+        return;
+    } catch(e) {}
+
+    location.hash = '#' + hashUrl;
+}
+
+function pageDataHandler(currentPage, arrayDataPages){
+    const attrValue = currentPage[0].attributes.data.value;
+    const heightElement = currentPage[0].clientHeight;
+    const offsetTop = currentPage[0].offsetTop;
+    const arrayDataPagesLength = arrayDataPages.length;
+    const id = arrayDataPagesLength > 0 ? arrayDataPagesLength : 0;
+    arrayDataPages.push({
+        url: attrValue,
+        topPoint: offsetTop,
+        bottomPoint: offsetTop + heightElement,
+        id: id,
+        height: function() {
+            return this.bottomPoint - this.topPoint;
+        }
+    });
+
+    if (arrayDataPagesLength > 0) {
+        arrayDataPages[arrayDataPagesLength - 1].bottomPoint = offsetTop - 1;
+    }
+    /*console.log('oooooooooo');
+    for (let item of arrayDataPages) {
+        console.log('========================');
+        console.log('item.topPoint => ' + item.topPoint);
+        console.log('item.bottomPoint => ' + item.bottomPoint);
+        console.log('item.url => ' + item.url);
+    }*/
+}
+
+/*function preLoader() {
+    setTimeout(function () {
+        let preloader = $('.loaderArea');
+        if (!preloader.hasClass('done')) {
+            preloader.addClass('done');
+            body.removeClass('fixed');
+        }
+    }, 1000);
+}*/
+
+
+
